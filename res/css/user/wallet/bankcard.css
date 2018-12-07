@@ -1,0 +1,57 @@
+.mui-content,body{
+	background-color: #FFFFFF;
+}
+.mui-content .bankmessage {
+	width: 6rem;
+	margin-left: 0.24rem;
+	height: 2.24rem;
+	background-color: #FFD006;
+	overflow: hidden;
+	border-radius: 0.12rem;
+}
+
+.mui-content .bankmessage dd {
+	margin-left: 0.55rem;
+	margin-top: 0.38rem;
+	color: #FFFFFF;
+}
+
+.mui-content .bankmessage dd span {
+	opacity: 0.76;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.34rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	display: block;
+	margin-bottom: 0.54rem;
+}
+
+.mui-content .bankmessage dd i {
+	font-style: normal;
+	opacity: 0.76;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.4rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+}
+
+.mui-content .drawalse {
+	width: 6rem;
+	margin-left: 0.24rem;
+	height: 0.82rem;
+	background-color: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.12rem;
+	position: absolute;
+	bottom: 0.72rem;
+}
+
+.mui-content .drawalse a {
+	display: block;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.33rem;
+	color: #4B4949;
+	letter-spacing: 0.04rem;
+	padding-top: 0.24rem;
+	text-align: center;
+}

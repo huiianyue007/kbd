@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多我的储值卡</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/card/memcards.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header">
+					储值卡
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<!-- 菜单容器 -->
+			<!--header end-->
+			<div class="mui-content user-memCard" v-show="loaded" style="display: none;">
+				<div id="memCards" v-show="memCards&&memCards.length>0">
+					<div class="memcard-overview">
+						<span v-cloak>{{memCards.length}}张</span>
+						<span v-cloak>总计{{toatalBalance}}</span>
+					</div>
+
+					<div v-for="data in memCards" class="mui-card memCard">
+						<!--内容区-->
+						<div class="mui-card-content card-content" v-tap="[openWindow,data]">
+							<div class="card-bg">
+							  <div class="rate">
+							    {{ ((data.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+							  </div>
+							  <div class="rate">
+                  .{{ ((data.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                </div>
+                <div class = 'rate'>折</div>
+							</div>
+							<span class="text-cardname" v-text="data.shopName"></span>
+							<div class="shareTag" v-if="data.isCardShare=='1'">
+								共享
+							</div>
+							<div class="value-info">
+								<span v-cloak>余额：{{data.cardAmount}}</span>
+								<span v-cloak>累计收益：{{data.shareAmountIn}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="emptyData" v-show="!memCards||memCards.length==0">
+					<img src="../../../res/img/common/successRemind.png" />
+					<span>目前暂无储值卡</span>
+				</div>
+				<div id="securityArea" class="securityArea" style="display:none;"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="memcards.js"></script>
+	</body>
+
+</html>

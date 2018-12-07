@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>卡不多商家卡列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../res/css/mui.min.css" />
+    <link rel="stylesheet" href="../../res/css/iconfont.css" />
+    <link rel="stylesheet" href="../../res/css/base.css" />
+    <link rel="stylesheet" href="../../res/css/merchant/merchantCard.css" />
+    <link rel="stylesheet" href="../../res/css/style.css" />
+    <style>
+      .header {
+        display: inline;
+        padding: 0px;
+      }
+      
+      .mui-bar .mui-btn-link {
+        font-size: 14px;
+        line-height: 44px;
+        top: 0;
+        padding: 0;
+        color: #4B4949;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- top -->
+      <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title merchantCard">
+					<ul class="header">
+						<li status="0" class="headerLi headerLiActive">蹭卡</li>
+						<li id="buyCardHeader" status="1" class="headerLi">购卡</li>
+					</ul>
+				</h1>
+        <a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+        <a id="shopDetails" class="mui-pull-right mui-btn-link shopDetailBtn">商家详情</a>
+      </header>
+      <!-- 菜单容器 -->
+      <!--header end-->
+      <div class="mui-content shop-merchantCard">
+        <div id="cengCard">
+          <div class="navbar" id="navbar">
+            <ul>
+              <li id="newCard" dataId="" class="navbarActive">新卡推荐<img src="../../res/img/common/cardType.png" /></li>
+              <li id="all" dataId="" class="">全部<img src="../../res/img/common/cardType.png" /></li>
+            </ul>
+          </div>
+          <div class="navbarSecond" id="newCardType" style="display: none;">
+            <ul>
+              <li id="newCardTypeOne" type="0" class="liActive">新卡推荐</li>
+              <li type="1">余额最多</li>
+              <li type="2">折扣最低</li>
+            </ul>
+          </div>
+          <div class="navbarSecond" id="allType" style="display: none;">
+            <ul>
+              <li type="1">男卡主</li>
+              <li type="0">女卡主</li>
+              <li type="2">全部</li>
+            </ul>
+          </div>
+          <div class="tanceng" style="display: none;" id="tanceng"></div>
+          <div id="cengCardContent" style="display: none;">
+            <div class="merchantCardContent" v-show="merchantCards&&merchantCards.length>0">
+              <div v-for="data in merchantCards" class="mui-card memCard" v-tap="[openWindow,data]">
+                <div class="mui-card-content card-content">
+                  <div class="card-bg">
+                    <div class="rate">
+                      {{ ((data.shareRate * 1).toFixed(1) + '').split('.')[0] }}
+                    </div>
+                    <div class="rate">
+                      .{{ ((data.shareRate * 1).toFixed(1) + '').split('.')[1] }}
+                    </div>
+                    <div class='rate'>折</div>
+                  </div>
+                  <div class="shareTag">
+                    {{data.shopName}}
+                  </div>
+                  <div class="value-info">
+                    <span v-cloak><img :src="data.headImgUrlPress|| '../../res/img/common/default.png'"/><i>{{data.nickName}}<br/><img v-if="data.sex=='1'" src="../../res/img/common/man.png"/><img v-if="data.sex=='0'" src="../../res/img/common/gril.png"/><em>{{data.age}}</em></i></span>
+                    <span v-cloak>可消费金额：{{data.consummerAmount}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="emptyDataCengCard" class="emptyData" style="display: none;">
+            <img src="../../res/img/common/successRemind.png" />
+            <span>暂无共享卡主，快来成为<br/>第一个共享卡主吧~</span>
+            <button v-tap="[becomeCardOwner,'']">成为卡主</button>
+            <i>成为卡主，享受更低折扣</i>
+          </div>
+          <div id="securityArea" class="securityArea" style="display:none;"></div>
+        </div>
+        <div id="BuyCard" style="display: none;">
+          <div id="buCardContent" style="display: none;">
+            <div class="user-memCard" v-if="merchantCards.length>0">
+              <div v-for="data in merchantCards" class="mui-card memCard" v-tap="[openCardSelling,data]">
+                <div class="mui-card-content card-content">
+                  <!--<img :src="data.cardRate|imgBuySrc" class="card-bg" />-->
+                  <div class="card-bg">
+                    <div class="rate">
+                      {{ ((data.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+                    </div>
+                    <div class="rate">
+                      .{{ ((data.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                    </div>
+                    <div class='rate'>折</div>
+                  </div>
+                  <div class="shareTag">
+                    充值{{data.cardAmount}}元
+                  </div>
+                  <div class="value-info">
+                    <span v-cloak>立省<em>{{data.cardAmount|calaVal(data.cardRate)}}</em>元</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="emptyData" id="emptyDataBuyCard" style="display: none;">
+            <img src="../../res/img/common/successRemind.png" />
+            <span>该商家暂无售卡</span>
+          </div>
+          <div id="securityAreaBuy" class="securityArea" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../res/js/immersed.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+    <script type="text/javascript" src="../../res/js/mui.min.js"></script>
+    <script type="text/javascript" src="../../res/app/tools.js"></script>
+    <!-- 工具类 -->
+    <script type="text/javascript" src="../../res/app/app.js"></script>
+    <script type="text/javascript" src="merchantCard.js"></script>
+  </body>
+
+</html>

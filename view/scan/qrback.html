@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>扫码界面返回按钮</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+	</head>
+	<body style="background-color: transparent;">
+		<div id="backBtn" style="border-radius: 50%; width:45px; height: 45px; background-color: rgba(0,0,0,0.6);padding: 7px;">
+			<span class="mui-icon mui-icon-back" style="color: #FFFFFF; font-size: 30px;"></span>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../res/js/mui.min.js" ></script>
+	<script>
+		mui.init();
+		mui.plusReady(function(){
+			document.getElementById("backBtn").addEventListener("tap", function(){
+				plus.webview.currentWebview().opener().evalJS("back()");
+			});
+		})
+	</script>
+</html>

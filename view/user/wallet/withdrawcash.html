@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>卡不多的提现记录（列表）</title>
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			
+			i,em {
+				font-style: normal;
+				display: inline;
+			}
+			
+			.mui-media-object {
+				border-radius: 50%;
+			}
+			
+			.rightContent {
+				float: right;
+			}
+			.mui-table-view-cell:after{
+				height: 0px;
+			}
+			.mui-card{
+				font-size: 11px;
+			}
+			p{
+				color: #9B9898 ;
+				font-size: 11px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title" v-cloak>{{title}}</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div class="mui-card" id="withdrawcashs" style="display: none;">
+					<ul class="mui-table-view">
+						<li v-for="data in withdrawcashs" class="mui-table-view-cell mui-media"  v-tap="[openWindow,data.id]">
+							<img class="mui-media-object mui-pull-left" src="../../../res/img/common/tixian.png">
+							<div class="mui-media-body">
+								订单尾号{{data.moneyNum}}<i class="rightContent" style="font-size: 17px;color: #B1ADAD;">{{data.moneyAmount|floatVal}}</i>
+								<p>{{data.createTime}}
+									<i class="rightContent" style="color: #F03737;" v-if="data.isMoney=='0'">处理中</i>
+									<i class="rightContent" style="color: #0BC23E" v-if="data.isMoney=='1'">审核通过</i>
+									<i class="rightContent" style="color: #B1ADAD" v-if="data.isMoney=='2'">已付款</i>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="emptyData" id="emptyData" style="display: none;">
+					<img src="../../../res/img/common/successRemind.png" />
+					<span>目前暂无提现记录</span>
+				</div>
+				<div id="securityArea" class="securityArea" style="display:none;"></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="withdrawcash.js"></script>
+	</body>
+
+</html>

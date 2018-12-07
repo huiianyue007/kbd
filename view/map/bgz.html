@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mui-content user-merchantCard">
+				<div class="mui-scroll-wrapper mui-slider-indicatorcode mui-segmented-control mui-segmented-control-inverted" style="height: 120px;">
+					<div class="mui-scroll">
+						<div v-for="data in merchantCards" class="mui-control-item merchantCard" style="width: 300px;height: 100px; border:1px #FF0000 solid;margin: 10px 10px 0px;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+	<script>
+		mui.init()
+		var vueCtl = new Vue({
+			el: '#app',
+			data: {
+				app: window.app,
+				selfWebView: {},
+				title: "卡不多",
+				merchantParam: {
+					longitude: "",
+					latitude: ""
+				},
+				merchantCards: [{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				},{
+						"id": "bdba79556360499c8b14a8061ba44e13",
+						
+				}
+
+				]
+			},
+			filters: {
+				intVal: function(value) {
+					return value.split('.')[0] || 10;
+				},
+				floatVal: function(value) {
+					return value.split('.')[1] || 0;
+				}
+
+			},
+			methods: {
+				openWindow: function(id) {
+					console.log(id);
+					app.normalOpen("user/card/memcardDetail", "memcardDetail.html")
+				}
+			}
+		});
+		options = {
+		 startX: 0, //初始化时滚动至x
+		 startY: 0, //初始化时滚动至y
+		 indicators: true, //是否显示滚动条
+		 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+		 bounce: true //是否启用回弹
+		}
+		mui('.mui-scroll-wrapper').scroll(options);
+	</script>
+
+</html>

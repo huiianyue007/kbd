@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多储值卡支付</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/pay/rubCardPay.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+
+	</head>
+
+	<body>
+		<div id="app" class="rubCardPay">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">
+					储值卡支付
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<!-- 菜单容器 -->
+			<!--header end-->
+			<div class="mui-content shop-merchantCard" v-show="loaded" style="display: none;">
+				<div class="merchantCardContent">
+					<div class="mui-card memCard">
+						<div class="mui-card-content card-content">
+							<!--<img v-cloak :src="cardDetails.cardRate|imgSrc" class="card-bg" />-->
+							<div class="card-bg">
+                <div class="rate">
+                  {{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+                </div>
+                <div class="rate">
+                  .{{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                </div>
+                <div class = 'rate'>折</div>
+              </div>
+							<span v-cloak class="text-cardname" v-text="cardDetails.cardName"></span>
+							<div v-cloak class="shareTag">
+								{{cardDetails.shopName}}
+							</div>
+							<div class="value-info">
+								<span v-cloak><img :src="cardDetails.headImgUrlPress"/><i>{{cardDetails.nickName}}<br/><img v-if="cardDetails.sex=='1'" src="../../res/img/common/man.png"/><img v-if="cardDetails.sex=='0'" src="../../res/img/common/gril.png"/><em>{{cardDetails.age}}</em></i></span>
+								<span v-cloak>可消费金额：{{cardDetails.consummerAmount}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="payMoney">
+						<span>¥</span>
+						<input id="moneyIpt" v-model="money" type="number" @focus="focusIpt" placeholder="请输入账单原始金额"/>
+					</div>
+				<div class="payInfo">
+					<span>储值卡支付</span>
+					<p>支付金额<i>{{payMoney}}元</i></p>
+					<p>尊享折扣<em>{{cardDetails.cardRate}}折</em></p>
+					<p>优惠金额<em>{{discountMoney}}元</em></p>
+				</div>
+				<div class="payType">
+					<span>支付方式</span>
+					<ul>
+						<li><img src="../../res/img/common/mycard.png"/><span>余额支付<img class="payTypeImg" src="../../res/img/common/checked.png"/></span></li>
+					</ul>
+				</div>
+				<div class="payButton" id="payButton" v-show="showBtn=='1'">
+					<button id="recharge" class="mui-btn">充值</button>
+					<button id="pay" class="mui-btn">支付</button>
+				</div>
+				<div class="tanceng" v-show="remindType=='1'"></div>
+				<dl class="remindTrue" v-show="remindType=='1'">
+					<dt>
+						<p>储值卡余额不足以支付消费订单<br/>
+						购卡享受优惠吧~~
+						</p>
+					</dt>
+					<dd>
+						<span class="cancel" id="cancel">重新输入</span>
+						<span class="cashSuccess" id="success">充值</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../res/js/paytools.js" ></script>
+		<script type="text/javascript" src="storedCardPay.js"></script>
+	</body>
+
+</html>

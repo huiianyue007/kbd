@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多完善个人信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/user/compinfo.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<link rel="stylesheet" href="../../res/css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../res/css/mui.poppicker.css" />
+
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mui-content user-compinfo">
+				<div class="mui-content-padded">
+					<h3 class="kbd-header" v-text="title">
+					</h3>
+				</div>
+				<div class="mui-content-padded head-container">
+					<div class="head-box">
+						<img id="user_head" :src="user.headImgUrlPress"/>
+					</div>
+				</div>
+				<div class="mui-content-padded">
+					<div class="mui-input-row mui-radio mui-left radioGroup">
+						<img class="radio radioActive" sex="0" src="../../res/img/common/gril.png" />
+						<img class="radio" sex="1" src="../../res/img/common/man.png" />
+					</div>
+				</div>
+				<form id='login-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label>昵称</label>
+						<input v-model="user.nickname" type="text" class="mui-input" placeholder="请输入您的昵称">
+					</div>
+					<div class="mui-input-row">
+						<label>年龄</label>
+						<input id="userAge_select" v-model="user.age" type="text" class="mui-input" placeholder="请选择您的年龄">
+					</div>
+				</form>
+				<div class="mui-content-padded submit-area">
+					<button id='perfectUserinfoBtn' class="mui-btn mui-btn-block login-btn" disabled="disabled">完成</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="compinfo.js"></script>
+	</body>
+
+</html>

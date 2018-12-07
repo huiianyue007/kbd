@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>扫码支付</title>
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<!--<link rel="stylesheet" href="../../res/css/common.css" type="text/css" charset="utf-8"/>-->
+		<style type="text/css">
+			#bcid {
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				text-align: center;
+			}
+			.tip {
+				color: #FFFFFF;
+				font-weight: bold;
+				text-shadow: 0px -1px #103E5C;
+				font-size: 5rem;
+			}
+		</style>
+	</head>
+	<body style="background-color: #000000;">
+		<div id="bcid">
+			<div style="height:40%"></div>
+			<p class="tip">
+				<span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>
+			</p>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+	<script type="text/javascript" src="../../res/js/mui.min.js" ></script>
+	<script type="text/javascript" src="../../res/app/app.js" ></script>
+	<script type="text/javascript" src="qrscan.js" ></script>
+</html>

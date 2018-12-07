@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>卡不多的蹭卡记录</title>
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			
+			span {
+				float: right;
+			}
+			
+			.topContent li {
+				background-color: #FDD804;
+				height: 86px;
+				line-height: 70px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			
+			.topContent li span {
+				font-size: 44px;
+				color: #FFFFFF;
+			}
+			
+			.details li {
+				font-size: 13px;
+				color: #252525;
+				letter-spacing: 1.31px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					蹭卡详情
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content" >
+				<ul class="mui-table-view topContent">
+					<li class="mui-table-view-cell" v-cloak>钱包到账<span v-cloak>{{incomeDetails.walletAmountIn|floatVal}}</span></li>
+				</ul>
+				<ul class="mui-table-view details">
+					<li class="mui-table-view-cell">本金<span v-cloak>{{incomeDetails.cardAmountOut|floatVal}}</span></li>
+					<li class="mui-table-view-cell">净利润收益<span v-cloak>{{incomeDetails.shareAmountUser|floatVal}}</span></li>
+					<li class="mui-table-view-cell">储值卡余额<span v-cloak>{{incomeDetails.cardAmountRemain|floatVal}}</span></li>
+					<li class="mui-table-view-cell">蹭卡人昵称<span v-cloak>{{incomeDetails.consumer}}</span></li>
+					<li class="mui-table-view-cell">商家名称<span v-cloak>{{incomeDetails.shopName}}</span></li>
+					<li class="mui-table-view-cell">储值卡名称<span v-cloak>{{incomeDetails.cardName}}</span></li>
+					<li class="mui-table-view-cell">交易单号<span v-cloak>{{incomeDetails.orderNum}}</span></li>
+					<li class="mui-table-view-cell">交易时间<span v-cloak>{{incomeDetails.createTime}}</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="msgCardDetails.js"></script>
+	</body>
+
+</html>

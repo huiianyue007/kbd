@@ -1,0 +1,194 @@
+body {
+	background-color: #fcf9f9;
+}
+
+.wallet-home {
+	background-color: #FCF9F9;
+}
+
+.wallet-home .wallet-info {
+	height: 1.55rem;
+	text-align: center;
+	background-color: #FFD006;
+	position: relative;
+}
+
+.wallet-home .wallet-info .wallet-money {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.7rem;
+	color: #FFFFFF;
+	padding-top: 0.6rem;
+}
+
+.wallet-home .wallet-info .wallet-money img {
+	width: 0.4rem;
+	height: 0.4rem;
+	z-index: 100;
+	position: absolute;
+	top: 0.13rem;
+	right: 0.28rem;
+}
+
+.wallet-home .wallet-value {
+	clear: both;
+	height: 1.02rem;
+	padding-top: 0.2rem;
+	background-color: #fff;
+}
+
+.wallet-home .wallet-value .info-card .value {
+	opacity: 0.54;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	display: block;
+	text-align: center;
+}
+
+.wallet-home .wallet-value .info-card .text {
+	opacity: 0.54;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.2rem;
+	color: #4B4949;
+	letter-spacing: 0.03rem;
+	display: block;
+	text-align: center;
+}
+
+.wallet-home .mui-table-view {
+	margin-top: 0.18rem;
+}
+.mui-table-view-cell:after{
+	left: 0.34rem;
+}
+.wallet-home .mui-table-view .mui-table-view-cell {
+	padding: 0.25rem 0.34rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+}
+
+.wallet-home .mui-table-view .mui-table-view-cell:after {
+	background-color: #D8D8D8;
+}
+
+.wallet-home .mui-table-view:after {
+	height: 0px;
+}
+
+.wallet-home .mui-table-view:before {
+	height: 0px;
+}
+
+.wallet-home .cash-btn {
+	border: 0px;
+	background-color: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.08rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.34rem;
+	color: #4B4949;
+	letter-spacing: 0.08rem;
+	position: absolute;
+	width: 6rem;
+	bottom: 1.12rem;
+	left: 0.22rem;
+}
+
+.wallet-home .cashText {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.18rem;
+	color: #ADADAD;
+	letter-spacing: 0.04rem;
+	position: absolute;
+	bottom: 0.64rem;
+	left: 0.22rem;
+}
+
+.tanceng {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: #000;
+	filter: alpha(opacity=15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	display: "";
+}
+
+.remindTrue {
+	background-color: #FFFFFF;
+	border-radius: 0.12rem;
+	width: 4.7rem;
+	height: 2.32rem;
+	color: #666;
+	z-index: 200000;
+	position: absolute;
+	margin: 0 auto;
+	left: 0.81rem;
+	top: 4.26rem;
+}
+
+.remindTrue dt {
+	height: 1.5rem;
+	color: #252525;
+	display: block;
+	line-height: 23px;
+	padding-top: 0.43rem;
+	font-size: 0.22rem;
+}
+
+.remindTrue dt p {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #252525;
+	letter-spacing: 0.06rem;
+	text-align: center;
+}
+
+.remindTrue dt p i {
+	clear: both;
+	display: block;
+	font-family: PingFang-SC-Regular;
+	font-size: 20px;
+	color: #252525;
+	letter-spacing: 0;
+	text-align: center;
+	margin-top: 20px;
+	font-style: normal;
+}
+
+.remindTrue dd {
+	height: 0.82rem;
+}
+
+.cancel {
+	font-size: 0.25rem;
+	color: #4B4949;
+	width: 2.35rem;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background: #F6F4F4;
+	position: absolute;
+	left: 0px;
+	text-align: center;
+	border-bottom-left-radius: 0.12rem;
+}
+
+.telPhone {
+	font-size: 0.25rem;
+	color: #252525;
+	display: block;
+	float: right;
+	width: 2.35rem;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background: #FFD006;
+	border-bottom-right-radius: 8px;
+	text-align: center;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../res/css/mui.min.css" />
+    <link rel="stylesheet" href="../../res/css/base.css" />
+    <style>
+      body,
+      .mui-content {
+        background-color: transparent;
+      }
+      .adContainer{
+        padding: 0rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        z-index: 2;
+      }
+      .oh{
+        overflow: hidden;
+      }
+      .adContainer img{
+        width:4.5rem;
+        height: auto;
+        display: block;
+      }
+      .adContainer span{
+        display: block;
+        width: 100%;
+        margin-top: .5rem;
+        text-align: center;
+        border-radius: 50%; 
+      }
+      .mui-icon-close{
+        font-size: 0.6rem;
+        color: #FFFFFF;
+      }
+    </style>    
+  </head>
+  <body style="background-color: rgba(0,0,0,0.15);">
+    <div id="app" style="height: auto;">
+      <div id="adContainer" class="adContainer" v-if = 'ad'>
+        <div class = 'oh'>
+          <img id="jumpUrl" :src="ad.jumpPic" width="100%" @click = 'update'/>
+          <span v-if = 'ad.isForce === "0"' @click.stop = 'close' class="mui-icon mui-icon-close"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="../../res/js/mui.min.js"></script>
+  <script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+  <script type="text/javascript" src="../../res/app/app.js"></script>
+  <script type="text/javascript" src="version.js"></script>
+</html>

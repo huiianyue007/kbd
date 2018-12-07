@@ -1,0 +1,99 @@
+.user-memCard .memCard {
+	margin: 0;
+	border-radius: 0.12rem;
+	box-shadow: none;
+}
+
+.user-memCard .memCard .card-content {
+	height: 3.38rem;
+	width: 6rem;
+	margin-left: 0.2rem;
+	margin-top: 0.2rem;
+	color: #fff;
+}
+
+.user-memCard .memCard .card-content .shareTag {
+	width: 0.83rem;
+	height: 0.38rem;
+	text-align: center;
+	z-index: 100;
+	background: #B17738;
+	border-radius: 0.3rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.18rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	position: absolute;
+	right: 0.17rem;
+	top: 0.17rem;
+}
+.user-memCard .memCard .card-content .text-cardname {
+	font-size: 0.23rem;
+	position: absolute;
+	top: 0.23rem;
+	left: 0.34rem;
+}
+.user-memCard .memCard .card-content .value-info {
+	height: 0.84rem;
+	width: 100%;
+	position: absolute;
+	top: 1.83rem;
+	background: rgba(0,0,0,.2);
+}
+
+.user-memCard .memCard .card-content .value-info span {
+	font-size: 0.27rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	margin-left: 0.26rem;
+	display: inline-block;
+	height: 0.83rem;
+	padding-top: 0.2rem;
+}
+
+.user-memCard .memCard .card-content .value-info span:nth-child(2) {
+	float: right;
+	margin-right: 0.3rem;
+}
+
+.user-memCard .mui-table-view:before {
+	background-color: #fff;
+}
+
+.user-memCard .mui-table-view:after {
+	background-color: #fff;
+}
+.btn{
+	position: absolute;
+	bottom: 0.4rem;
+	width: 100%;
+}
+.btn button:nth-child(1){
+	background: #FFFFFF;
+	border-radius: 0.12rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 2.48rem;
+	height: 0.84rem;
+	margin-left: 0.24rem;
+	border: 1px solid #CCCCCC;
+}
+.btn button:nth-child(2){
+	background: #FFD006;
+	border-radius: 0.12rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 2.48rem;
+	height: 0.84rem;
+	float: right;
+	margin-right: 0.24rem;
+}
+.fixedRight{
+	margin-right: -0.7rem !important;
+}

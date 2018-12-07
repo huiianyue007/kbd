@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多身份认证</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/user/authentication.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mui-content user-compinfo">
+				<header class="mui-bar mui-bar-nav">
+					<h1 class="mui-title kbd-header">
+						身份认证
+					</h1>
+					<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				</header>
+				<div class="mui-content user-login">
+					<ul class="mui-table-view content">
+						<li class="mui-table-view-cell">
+							真实姓名<input type="text" v-model="authentication.realName" class="mui-input" placeholder="请输入真实姓名" />
+						</li>
+						<li class="mui-table-view-cell">
+							身份证号<input type="text" v-model="authentication.identityCard" name="idCard" v-validate="'idCard'" class="mui-input" placeholder="请输入身份证号" />
+						</li>
+						<li class="mui-table-view-cell verifyCode" v-if = 'authentication.status == "0"'>
+							<input v-model='authentication.verifyCode' type="number" class="mui-input" placeholder="请输入验证码"><input type="button" class="random-btn" id="randBtn" value="点击获取" />
+						</li>
+					</ul>
+					<div class="mui-content-padded submit-area">
+						<button id='authenticationBtn' class="mui-btn mui-btn-block login-btn">下一步</button>
+					</div>
+					<div class="tanceng" id="tanceng" style="display: none;"></div>
+					<dl class="tckok" id="tckok" style="display: none;">
+						<dt>身份验证失败<br/><i>如有疑问，请联系客服进行咨询！</i></dt>
+						<dd id="sure">确定</dd>
+					</dl>
+					<dl id="remindTrue" class="remindTrue" style="display: none;">
+						<dt>
+							<p v-text="giveupText"></p>
+						</dt>
+						<dd>
+							<span id="cancel" class="cancel">放弃</span>
+							<span id="writting" class="telPhone">继续填写</span>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<!--
+        	描述：validate
+        -->
+		<script type="text/javascript" src="../../res/js/vue/vee-validate.js" ></script>
+		<script type="text/javascript" src="../../res/js/vue/locale/zh_CN.js" ></script>
+		<script type="text/javascript" src="../../res/js/vue/custVeeValidate.js" ></script>
+		
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="authentication.js"></script>
+	</body>
+
+</html>

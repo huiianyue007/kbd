@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多消息通知</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<!--<h1 class="mui-title kbd-header">
+					消息通知
+				</h1>-->
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<!-- 菜单容器 -->
+			<!--header end-->
+			<div class="mui-content mymessage">
+				<h1 class="header-title">
+	    				我的消息
+		    		</h1>
+				<div class="mui-content-padded msglink-list">
+					<ul class="mui-table-view">
+						<li v-for="data in listData" class="mui-table-view-cell mui-media" :id="data.id">
+							<a class="mui-navigate-right">
+								<span class="mui-badge mui-badge-warning" v-show="data.count>0" style="background-color: #FFD006;">{{data.count}}</span>
+								<img class="mui-media-object mui-pull-left" :src="data.img">
+								<div class="mui-media-body">
+									{{data.title}}
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="mymsg.js"></script>
+	</body>
+
+</html>

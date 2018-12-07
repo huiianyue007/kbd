@@ -1,0 +1,270 @@
+.user-memCard .memCard {
+	margin: 0;
+	border-radius: 0.12rem;
+	box-shadow: none;
+}
+
+.user-memCard .memCard .card-content {
+	height: 3.38rem;
+	width: 6rem;
+	margin-left: 0.2rem;
+	margin-top: 0.2rem;
+	color: #fff;
+}
+
+.user-memCard .memCard .card-content .shareTag {
+	width: 3rem;
+	height: 0.35rem;
+	z-index: 100;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.35rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	position: absolute;
+	left: 0.33rem;
+	top: 0.32rem;
+}
+
+.user-memCard .memCard .card-content .card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.user-memCard .memCard .card-content .value-info {
+	height: 0.84rem;
+	width: 100%;
+	position: absolute;
+	top: 1.6rem;
+}
+.user-memCard .memCard .card-content .value-info i{
+	font-style: normal;
+}
+.user-memCard .memCard .card-content .value-info em{
+	font-style: normal;
+	font-size: 0.38rem;
+}
+.user-memCard .memCard .card-content .value-info span {
+	font-size: 0.27rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	margin-left: 0.26rem;
+	display: inline-block;
+	height: 0.83rem;
+	padding-top: 0.2rem;
+}
+
+.user-memCard .mui-table-view:before {
+	background-color: #fff;
+}
+
+.user-memCard .mui-table-view:after {
+	background-color: #fff;
+}
+.cardSelling .memCard .cardNum {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #4B87E0;
+	letter-spacing: 0.02rem;
+	float: right;
+	margin-right: 0.4rem;
+}
+
+.cardSelling .payMoney p {
+	display: block;
+	text-align: center;
+	padding-top: 0.2rem;
+	font-family: ArialMT;
+	font-size: 0.44rem;
+	color: #433D3D;
+	letter-spacing: 0.02rem;
+}
+
+.cardSelling .payInfo {
+	margin-top: 0.24rem;
+	width: 6rem;
+	margin-left: 0.18rem;
+	border-bottom: 1px solid #EAE8E8;
+}
+
+.cardSelling .payInfo span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #433D3D;
+	letter-spacing: 0.02rem;
+}
+.cardSelling .payInfo p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.cardSelling .payInfo i,
+.cardSelling .payInfo em {
+	font-style: normal;
+}
+
+.cardSelling .payInfo p {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.21rem;
+	color: #433D3D;
+	letter-spacing: 0;
+	padding-left: 0.18rem;
+	padding-top: 0.1rem;
+}
+
+.cardSelling .payInfo p i {
+	font-family: PingFang-SC-Medium;
+	font-size:0.21rem;
+	color: #221F1F;
+	letter-spacing: 0;
+	padding-right:0.18rem;
+	float: right;
+}
+
+.cardSelling .payInfo p em {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.21rem;
+	color: #676161;
+	letter-spacing: 0;
+	padding-right: 0.18rem;
+	float: right;
+}
+
+.cardSelling .payInfo p:nth-child(2) {
+	color: #676161;
+}
+
+.cardSelling .payInfo p:nth-child(4) {
+	color: #676161;
+	padding-bottom: 0.24rem;
+}
+.payType{
+	margin-bottom: 0.24rem;
+}
+.cardSelling .payType span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.26rem;
+	color: #433D3D;
+	letter-spacing: 0;
+	padding-top: 0.22rem;
+	padding-bottom: 0.22rem;
+}
+
+.cardSelling .payType ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.cardSelling .payType ul li {
+	list-style: none;
+}
+
+.cardSelling .payType ul li img {
+	width: 0.8rem;
+	height: 0.8rem;
+	float: left;
+	margin-left: 0.2rem;
+}
+
+.cardSelling .payType ul li span {
+	text-align: left;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.3rem;
+	color: #949494;
+	letter-spacing: 0;
+	padding: 0;
+	padding-top: 0.2rem;
+	padding-bottom: 0.3rem;
+	padding-left: 1.3rem;
+}
+
+.cardSelling .payType ul li span img {
+	float: right;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top: -0.08rem;
+	margin-right: 0.26rem;
+}
+
+.cardSelling .payButton {
+	display: block;
+	position: absolute;
+	bottom: 0.22rem;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.cardSelling .payButton button {
+	border: 0px;
+	width: 6rem;
+	height: 0.82rem;
+	margin-left: 0.24rem;
+	background: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.12rem;
+}
+.shadow{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(0,0,0,.5);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.shadow .shadow_content{
+  width: 4.72rem;
+  background-color: #FFFFFF;
+  border-radius: 0.12rem;
+  width: 4.72rem;
+  text-align: center;
+  height: 3.13rem;
+  display: flex;
+  flex-direction: column;
+}
+.shadow .shadow_content .con{
+  flex:1;
+  padding:0.37rem;
+  box-sizing: border-box;
+}
+.shadow .shadow_content .con .amount{
+  font-size: 18px;
+  color: #333;
+  margin: .1rem 0;
+}
+.shadow .shadow_content .con .desc{
+  text-align: left;
+  line-height: 2em;
+}
+.shadow .shadow_content .con .amount span{
+  font-size: 12px;
+}
+.bottom{
+  flex:0 auto;
+  display: flex;
+  
+}
+.bottom>div{
+  flex:1;
+  height: 0.84rem;
+  line-height: .84rem;
+  text-align: center;
+}
+.bottom .cancel{
+  background: #F6F4F4;
+  border-bottom-left-radius: 0.12rem;
+}
+.bottom .confirm{
+  background: #FFD006;
+  border-bottom-right-radius: 0.12rem;
+}

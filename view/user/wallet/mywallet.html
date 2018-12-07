@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多我的钱包</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/wallet/mywallet.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">
+					我的钱包
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				<button id='cashInstructions' class="mui-pull-right mui-btn-link" style="display: none;">
+					<span class="mui-icon iconfont icon-chifan"></span>
+				</button>
+			</header>
+			<!-- 菜单容器 -->
+			<!--header end-->
+			<div class="mui-content wallet-home" id="wallerInfo" style="display: none;">
+				<div class="wallet-info" id="personalInfo">
+					<div class="wallet-money">
+						{{wallet.wallet}}
+						<span id="cashInstru"><img src="../../../res/img/common/cashIns.png"/></span>
+					</div>
+				</div>
+				<div class="mui-content wallet-value">
+					<div class="mui-row">
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="wallet.totalIncome"></span>
+								<span class="text">累计收益(元)</span>
+							</a>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="wallet.yesterdayIncome"></span>
+								<span class="text">昨日收益(元)</span>
+							</a>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="wallet.shareEarnRate"></span>
+								<span class="text">年化收益率(%)</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" id="income">
+						<a class="mui-navigate-right">
+							收入明细
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="withdrawcash">
+						<a class="mui-navigate-right">
+							提现记录
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="bankInfo">
+						<a class="mui-navigate-right">
+							银行卡
+						</a>
+					</li>
+				</ul>
+				<div class="mui-content-padded">
+					<button id='cashoutBtn' class="mui-btn mui-btn-block cash-btn">提现</button>
+					<span class="cashText">随时申请提现，到账时间1-3个工作日。</span>
+				</div>
+				<div class="tanceng" v-show="remindType=='1'"></div>
+				<dl id="remindTrue" class="remindTrue" v-show="remindType=='1'">
+					<dt>
+						<p>您还没有添加任何银行卡<br/>
+						添加后才能提现哦！</p>
+					</dt>
+					<dd>
+						<span id="cancel" class="cancel">取消</span>
+						<span id="addCard" class="telPhone">立即添加</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="mywallet.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多绑定银行卡</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/wallet/bankInfo.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<link rel="stylesheet" href="../../../res/css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../../res/css/mui.poppicker.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+				{{title}}
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				<a class="mui-icon mui-pull-right" id="saveNickName" style="display: none;">保存</a>
+			</header>
+			<div id="addBank" class="mui-content user-login">
+				<form id='login-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label>卡号</label>
+						<input id="bankNum" v-model="bankInfo.bankNum" name="bankNum" v-validate="'bankNum'" type="tel" class="mui-input" placeholder="请输入您的银行卡号">
+					</div>
+					<div class="mui-input-row" id="choiceBank">
+						<label>银行</label>
+						<span class="rightContent">
+							{{bankInfo.bankName}}
+						</span>
+						<a class="mui-navigate-right">
+						</a>
+					</div>
+				</form>
+				<form id='login-form' class="mui-input-group">
+					<div class="mui-input-row">
+						<label>持卡人</label>
+						<input id="realName" v-model="bankInfo.realName" type="text" class="mui-input" placeholder="请输入您的真实姓名">
+					</div>
+					<div class="mui-input-row">
+						<label>身份证</label>
+						<input id="idCard" v-model="bankInfo.identityCard" name="idCard" v-validate="'idCard'" type="text" class="mui-input" placeholder="请输入您的身份证">
+					</div>
+				</form>
+				<div class="mui-content-padded">
+					<button id='nextBtn' class="mui-btn mui-btn-block login-btn" disabled="disabled">下一步，设置提现密码</button>
+				</div>
+				<div class="tanceng" v-show="remindType=='1'"></div>
+				<dl id="remindTrue" class="remindTrue" v-show="remindType=='1'">
+					<dt>
+						<p>是否放弃已录入的信息？</p>
+					</dt>
+					<dd>
+						<span id="cancel" class="cancel">放弃</span>
+						<span id="writting" class="telPhone">继续填写</span>
+					</dd>
+				</dl>
+				<div class="tanceng" v-show="remindType=='2'"></div>
+				<dl id="remindTrue" class="remindTrue" v-show="remindType=='2'">
+					<dt>
+						<p>设置提现密码后才可以提现<br/>（可在设置里面进行初次设置）</p>
+					</dt>
+					<dd>
+						<span id="closeDiv" class="cancel">以后再说</span>
+						<span id="setOn" class="telPhone">继续设置</span>
+					</dd>
+				</dl>
+			</div>
+			<div id="checkBank" class="mui-content user-login" style="display: none;">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">工商银行</li>
+					<li class="mui-table-view-cell">农业银行</li>
+					<li class="mui-table-view-cell">中国银行</li>
+					<li class="mui-table-view-cell">建设银行</li>
+					<li class="mui-table-view-cell">招商银行</li>
+					<li class="mui-table-view-cell">邮储银行</li>
+					<li class="mui-table-view-cell">交通银行</li>
+					<li class="mui-table-view-cell">浦发银行</li>
+					<li class="mui-table-view-cell">民生银行</li>
+					<li class="mui-table-view-cell">兴业银行</li>
+					<li class="mui-table-view-cell">平安银行</li>
+					<li class="mui-table-view-cell">中信银行</li>
+					<li class="mui-table-view-cell">华夏银行</li>
+					<li class="mui-table-view-cell">广发银行</li>
+					<li class="mui-table-view-cell">光大银行</li>
+					<li class="mui-table-view-cell">北京银行</li>
+					<li class="mui-table-view-cell">宁波银行</li>
+				</ul>
+			</div>
+		</div>
+	
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<!--
+        	描述：validate
+        -->
+		<script type="text/javascript" src="../../../res/js/vue/vee-validate.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/locale/zh_CN.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/custVeeValidate.js" ></script>
+		
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="../../../res/app/map.js" ></script>
+		<script type="text/javascript" src="bankMap.js" ></script>
+		<script type="text/javascript" src="bankInfo.js"></script>
+	</body>
+
+</html>

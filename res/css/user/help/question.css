@@ -1,0 +1,147 @@
+.mui-content {
+	background-color: #FDFAFA;
+}
+.proposal {
+	width: 100%;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.proposal .proposal_content {
+  padding-top: 0.3rem;
+}
+.proposal .title {
+  font-family: PingFang-SC-Regular;
+  font-size: 0.23rem;
+  color: #4B4949;
+  letter-spacing: 0;
+  padding-bottom: 0.24rem;
+}
+
+
+.proposal .proposal_content .queationType {
+  background-color: #FFFFFF;
+  padding-bottom: 0.24rem;
+}
+
+.proposal .proposal_content .queationType p {
+  padding: 0px;
+  margin: 0px;
+  padding-top: 0.33rem;
+  padding-left: 0.26rem;
+}
+
+.proposal .proposal_content .queationType p img {
+  width: 0.24rem;
+  height: 0.24rem;
+}
+
+.proposal .proposal_content .queationType p span {
+  padding-left: 0.22rem;
+  font-family: PingFang-SC-Regular;
+  font-size: 0.24rem;
+  color: #4B4949;
+  letter-spacing: 0.02rem;
+}
+
+.proposal .question_content {
+  padding-top: 0.24rem;
+}
+
+.proposal .question_content .textarea_content {
+  background-color: #FFFFFF;
+  padding: 0.22rem;
+}
+
+.proposal .question_content .textarea_content .input_title {
+  font-family: PingFang-SC-Regular;
+  font-size: 0.2rem;
+  color: #4B4949;
+  letter-spacing: 0;
+  padding-bottom: 0.22rem;
+}
+
+.proposal .question_content .textarea_content .input_desc {
+  padding: 5px;
+}
+
+.proposal .question_content .textarea_content .input_tip {
+  font-family: PingFang-SC-Regular;
+  font-size: 0.18rem;
+  color: #BDBCBC;
+  letter-spacing: 0.02rem;
+  text-align: right;
+}
+
+.proposal .question_content .textarea_content input[type=color],
+.proposal .question_content .textarea_content input[type=date],
+.proposal .question_content .textarea_content input[type=datetime-local],
+.proposal .question_content .textarea_content input[type=datetime],
+.proposal .question_content .textarea_content input[type=email],
+.proposal .question_content .textarea_content input[type=month],
+.proposal .question_content .textarea_content input[type=number],
+.proposal .question_content .textarea_content input[type=password],
+.proposal .question_content .textarea_content input[type=search],
+.proposal .question_content .textarea_content input[type=tel],
+.proposal .question_content .textarea_content input[type=text],
+.proposal .question_content .textarea_content input[type=time],
+.proposal .question_content .textarea_content input[type=url],
+.proposal .question_content .textarea_content input[type=week],
+.proposal .question_content .textarea_content select,
+.proposal .question_content .textarea_content textarea {
+  margin-bottom: 0px;
+}
+
+.proposal .question_img {
+  padding-top: 0.22rem;
+}
+
+.proposal .question_img .pic_content {
+  background-color: #FFFFFF;
+}
+
+.proposal .question_img .pic_content ul {
+  list-style: none;
+  height: 1.56rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.proposal .question_img .pic_content ul li {
+  list-style: none;
+  height: 1.56rem;
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 0.12rem;
+}
+
+.proposal .question_img .pic_content ul li img {
+  margin-top: 0.22rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.proposal .question_img .pic_content ul li img:nth-child(2) {
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  float: right;
+  padding: 0px;
+  margin-top: 0.2rem;
+  margin-left: -0.2rem;
+}
+
+.proposal .question_btn {
+  margin-top: 0.6rem;
+}
+
+.proposal .question_btn button {
+  background-color: #FFD006;
+  box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+  border-radius: 0.12rem;
+  font-family: PingFang-SC-Medium;
+  font-size: 0.28rem;
+  color: #4B4949;
+  letter-spacing: 0.06rem;
+}

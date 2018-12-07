@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>卡不多充值支付</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../res/css/mui.min.css" />
+    <link rel="stylesheet" href="../../res/css/iconfont.css" />
+    <link rel="stylesheet" href="../../res/css/base.css" />
+    <link rel="stylesheet" href="../../res/css/pay/rechargePay.css" />
+    <link rel="stylesheet" href="../../res/css/style.css" />
+
+  </head>
+
+  <body>
+    <div id="app" class="cardSelling">
+      <!-- top -->
+      <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">
+					充值支付
+				</h1>
+        <a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+      </header>
+      <!-- 菜单容器 -->
+      <!--header end-->
+      <div class="mui-content">
+        <div class="scollContent">
+          <div class="user-memCard">
+            <div class="mui-card memCard">
+              <div class="mui-card-content card-content">
+                <div class="card-bg">
+                  <div class="rate">
+                    {{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+                  </div>
+                  <div class="rate">
+                    .{{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                  </div>
+                  <div class='rate'>折</div>
+                </div>
+                <div v-cloak class="shareTag">
+                  充值{{cardDetails.cardFaceAmount}}元
+                </div>
+                <div class="value-info">
+                  <span v-cloak><i>立省<em>{{cardDetails.cardFaceAmount|calaVal(cardDetails.cardRate)}}</em>元</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payMoney">
+            <p>¥{{cardDetails.cardFaceAmount}}</p>
+          </div>
+          <div class="payInfo">
+            <span>充值支付</span>
+            <p>支付金额<i>{{cardDetails.cardFaceAmount}}元</i></p>
+            <p>尊享折扣<em>{{cardDetails.cardRate}}折</em></p>
+            <p>立省<em>{{cardDetails.cardFaceAmount|calaVal(cardDetails.cardRate)}}元</em></p>
+          </div>
+          <div class="payType">
+            <span>支付方式</span>
+            <ul>
+              <li payType="0"><img src="../../res/img/common/weixinPay.png" /><span>微信支付<img class="payTypeImg" src="../../res/img/common/checked.png"/></span></li>
+              <li payType="1"><img src="../../res/img/common/alipay.png" /><span>支付宝支付<img class="payTypeImg" src="../../res/img/common/check.png"/></span></li>
+              <li payType="3"><img src="../../res/img/common/paymentCard.png" /><span>余额支付<img class="payTypeImg" src="../../res/img/common/check.png"/></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="payButton" id="payButton">
+          <button id="pay" class="mui-btn">确认支付</button>
+        </div>
+        <div class="shadow" v-show='show && payType == 3'>
+          <div class="shadow_content">
+            <div class="con">
+              <p>余额支付</p>
+              <p class="amount"><span>￥</span>{{ cardDetails.cardFaceAmount }}</p>
+              <p class="desc">商家名称: {{ shopname }}</p>
+              <p class="desc">储值卡名称: {{ cardDetails.cardName || cardDetails.cardFaceAmount + '元' + cardDetails.cardRate + '折储值卡' }}</p>
+            </div>
+            <div class="bottom">
+              <div class="cancel" @click='cancel'>取消</div>
+              <div class="confirm" @click='confirm'>确认支付</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../res/js/immersed.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+    <script type="text/javascript" src="../../res/js/mui.min.js"></script>
+    <script type="text/javascript" src="../../res/app/tools.js"></script>
+    <!-- 工具类 -->
+    <script type="text/javascript" src="../../res/app/app.js"></script>
+    <script type="text/javascript" src="../../res/js/paytools.js"></script>
+    <script type="text/javascript" src="rechargePay.js"></script>
+  </body>
+
+</html>

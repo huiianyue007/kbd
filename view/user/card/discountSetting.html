@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多添加储值卡</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<link rel="stylesheet" href="../../../res/css/v-range.css" />
+	</head>
+
+	<body>
+		<div id="app" style="line-height: normal;">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header">
+					共享折扣设定
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content shareCard" v-show="loaded" style="display: none;">
+				<div class="card bg-yellow cardinfo">
+					<div class="text-center title" v-cloak>
+						{{expoectIncome}}
+					</div>
+					<div class="text-center">
+						整卡预计收入
+					</div>
+					<div class="info-ul flex middle">
+						<div class="info-li">
+							<div class="text-center li-price" v-cloak>{{card.cardAmount|floatVal}}</div>
+							<div class="text-center li-text">卡余额</div>
+						</div>
+						<div class="info-li">
+							<div class="text-center li-price" v-cloak>{{maxIncome}}</div>
+							<div class="text-center li-text">最多赚取</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="flex middle center card_content discount">
+						<range v-model="discount" :min="5" :max="9.5" :step=".5" :bar-height="11">
+							<div class="thumb" slot="thumb">{{discount }}折</div>
+						</range>
+					</div>
+					<div class="flex middle text-center">
+						<h2>共享卡折扣</h2>
+					</div>
+				</div>
+				<div class="card">
+					<img class="cardImg" :src="tipsImg" />
+					<p>{{tipsMsg}}</p>
+				</div>
+				<button bgcolor="#FFD006" class="mui-btn" id="settingShare">保存</button>
+				<!--<button v-show="isCardShare=='0'" bgcolor="#FFD006" class="mui-btn" id="settingShare">开启共享</button>
+				<button v-show="isCardShare=='1'" bgcolor="#FFD006" class="mui-btn" id="closeShare">关闭共享</button>-->
+			</div>
+		</div>
+		</div>
+		</div>
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/components/draggable.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/components/range.js"></script>
+
+		<script type="text/javascript" src="discountSetting.js"></script>
+	</body>
+
+</html>

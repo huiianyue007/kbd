@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多商家列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/merchant/merchants.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<style>
+			.user-merchantCard {
+				background-color: #F6F6F6;
+			}
+			.mui-content .mui-pull-top-pocket{
+				/*top:15px!important;*/
+			}
+			.mui-pull-bottom-pocket, .mui-pull-top-pocket{
+				height: 70px;
+			}
+			.mui-pull-caption {
+				padding-top: 1.1rem;
+                background-image: url(../../res/img/animate/refreshing.gif);
+                background-size: 1.4rem 1.4rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 2rem;
+                height: 1.4rem;
+                font-size: 0.18rem;
+            	color: #FDD804;
+            }
+            .mui-pull{
+            	bottom: 2px;
+            }
+            /*下拉刷新圆形进度条的大小和样式*/
+			.mui-pull-loading{
+				display: none;
+			}
+            /*下拉刷新的箭头颜色*/
+            .mui-icon-pulldown {
+                color: #FDD804;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 菜单容器 -->
+		  	<!--header end-->
+		    <div class="mui-content user-merchantCard mui-scroll-wrapper" id="merchantCards" v-show="loaded" style="background: #FFFFFF;display: none;">
+				<div class="mui-scroll" style="background: #FFFFFF;">
+					<div v-for="data in merchantCards" class="mui-card merchantCard" v-show="merchantCards&&merchantCards.length>0" v-tap="[openWindow,data.id]">
+						<!--内容区-->
+						<div class="mui-card-content card-content">
+							<span class="merchname" v-text="data.shopName"></span>
+							<span class="distance">距离{{data.distance}}米|预计{{data.time}}分钟</span>
+							<div class="head">
+								<img :src="data.headImgUrlPress" />
+							</div>
+							<span class="useperson" v-cloak >
+								{{data.shopSharePeopleCount}}
+								<i>人在使用共享卡</i>
+							</span>
+							<div class="value-info">
+								点击使用
+								<span>{{data.shopMinRate|intVal}}<i>.{{data.shopMinRate|floatVal}}<em>折起</em></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="emptyData" v-show="!merchantCards||merchantCards.length==0" >
+						<img src="../../res/img/common/noShop.png" />
+						<span>当前范围没有商家哦</span>
+					</div>
+					<div id="securityArea" class="securityArea" style="display:none;"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--<script type="text/javascript" src="../../res/js/immersed.js" ></script>-->	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/vue-tap.js" ></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="merchants_sub.js" ></script>
+	</body>
+</html>

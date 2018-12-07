@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<style>
+			.lineBg {
+				background: -webkit-linear-gradient(top, #FFF, transparent)!important;
+				/* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(top, #FFF, transparent)!important;
+				/* Opera 11.1 - 12.0 */
+				background: -moz-linear-gradient(top, #FFF, transparent)!important;
+				/* Firefox 3.6 - 15 */
+				background: linear-gradient(top, #FFF, transparent) !important;
+				/* 标准的语法（必须放在最后） */
+			}
+			
+			body,
+			.mui-content {
+				background-color: transparent;
+			}
+			
+			.mui-bar {
+				background: transparent;
+			}
+			
+			.iconfont {
+				font-size: 20px;
+				color: black;
+			}
+			
+			.kbd-header {
+				font-family: "BY-Forvi-C3.00";
+				font-size: 18px;
+				color: #4B4949;
+				letter-spacing: 0;
+			}
+			
+			.mui-btn-link img {
+				margin-top: 8px;
+				height: 26px;
+				width: 26px;
+			}
+			
+			.unreadmarkup {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				float: right;
+				background-color: #FD5A04;
+				border-radius: 50%;
+				right: 0px;
+				top: 8px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header id="muiBar" class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					<img src="../../res/img/common/kbdLogo.png" height="16px" />
+				</h1>
+				<button id='meinfoBtn' class="mui-pull-left mui-btn-link">
+					<img src="../../res/img/map/me.png" />
+				</button>
+				<button id='msgBtn' class="mui-pull-right mui-btn-link">
+					<span id="unreadmarkup" class="unreadmarkup" style="display: none;"></span>
+					<img src="../../res/img/map/msg.png" />
+				</button>
+				<button id='merchantBtn' class="mui-pull-right mui-btn-link" style="margin-right: 15px;">
+					<img src="../../res/img/map/list.png"  />
+				</button>
+			</header>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+	<!--<script type="text/javascript" src="../../res/js/vue/vue-tap.js" ></script>-->
+	<script type="text/javascript" src="../../res/app/app.js"></script>
+	<script type="text/javascript" src="map_header.js"></script>
+
+</html>

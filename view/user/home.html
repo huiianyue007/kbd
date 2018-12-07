@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多个人首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/user/home.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+
+	</head>
+
+	<body>
+		<div id="app">
+			<!--header end-->
+			<div class="mui-content user-home" v-show="loaded">
+				<div class="user-info" id="personalInfo">
+					<div class="user-img">
+						<img :src='user.userImg' />
+					</div>
+					<div class="user-name" v-text="user.userName">
+					</div>
+					<div class="user-sex" v-cloak v-show="user.userName!='登录/注册'">
+						<img src="../../res/img/common/gril.png" v-show="user.sex=='0'||user.sex=='女'"/>
+						<img src="../../res/img/common/man.png" v-show="user.sex=='1'||user.sex=='男'"/>
+						<span v-text="user.age"></span>
+					</div>
+				</div>
+				<div class="btn">
+					<div class="closeBtn" id="closeBtn">
+						<img src="../../res/img/common/homeBack.png" />
+					</div>
+					<div class="settingBtn" id="setupBtn">
+						<img src="../../res/img/common/homeSetting.png" />
+					</div>
+				</div>
+				<div class="mui-content user-value">
+					<div class="mui-row">
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="user.cardCount"></span>
+								<span class="text">储值卡(张)</span>
+							</a>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="user.balance"></span>
+								<span class="text">总余额(元)</span>
+							</a>
+						</div>
+						<div class="mui-col-sm-4 mui-col-xs-4 info-card">
+							<a href="javascript:void(0);">
+								<span class="value" v-text="user.earnings"></span>
+								<span class="text">共享收益(元)</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<ul class="user-function">
+					<li id="mywallet" class="mui-table-view-cell link">
+						<a href="javascript:void(0);">
+							<span class="mui-icon iconfont mui-pull-left">
+								<img src="../../res/img/common/mywallet.png" />
+							</span>钱包
+						</a>
+					</li>
+					<li class="mui-table-view-cell link" id="myCard">
+						<a href="javascript:void(0);">
+							<span class="mui-icon iconfont mui-pull-left">
+								<img src="../../res/img/common/mycard.png" />
+							</span> 储值卡
+						</a>
+					</li>
+					<li class="mui-table-view-cell link" id="income">
+						<a id="coupons" href="javascript:void(0);">
+							<span class="mui-icon iconfont mui-pull-left">
+								<img src="../../res/img/common/homeCeng.png" />
+							</span> 蹭卡记录
+						</a>
+					</li>
+					<li class="mui-table-view-cell link">
+						<a id="helpAndfeedback" href="javascript:void(0);">
+							<span class="mui-icon iconfont mui-pull-left">
+								<img src="../../res/img/common/questionList.png" />
+							</span> 帮助与反馈
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="home.js"></script>
+	</body>
+
+</html>

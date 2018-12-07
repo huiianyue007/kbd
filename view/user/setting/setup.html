@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多设置</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+				{{title}}
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content user-setting">
+				<ul class="mui-table-view" style="margin-top: 0px;">
+					<li class="mui-table-view-cell" id="setPhone">
+						<a class="mui-navigate-right">手机号
+							<span class="mui-pull-right rightContent" v-cloak>
+								{{mobile}}
+							</span>
+						</a>
+					</li>
+					<!--<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">微信
+							<span class="mui-pull-right rightContent" v-cloak>
+								未绑定
+							</span>
+						</a>
+					</li>-->
+					<li class="mui-table-view-cell" id="changeLoginpwd">
+						<a class="mui-navigate-right">修改登录密码
+							<span class="mui-pull-right rightContent">
+							</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="changeMoneypwd">
+						<a class="mui-navigate-right">修改提现密码
+							<span class="mui-pull-right rightContent">
+							</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" >
+						<a class="">版本号{{versionNum}}
+						</a>
+					</li>
+					<!--<li class="mui-table-view-cell" id="updateUserInfo">
+						<a class="mui-navigate-right">完善个人信息
+							<span class="mui-pull-right rightContent">
+							</span>
+						</a>
+					</li>-->
+				</ul>
+				<div class="setBtn">
+					<button id='exitBtn' class="mui-btn mui-btn-block">退出登录</button>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="setup.js"></script>
+	</body>
+
+</html>

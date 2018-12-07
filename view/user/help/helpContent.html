@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多储值卡使用说明</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<style type="text/css">
+			.helpxq {
+				background-color: #FFFFFF;
+			}
+			
+			.helpxq p {
+				padding: 15px 15px;
+				font-family: PingFang-SC-Regular;
+				font-size: 14px;
+				color: #4B4949;
+				letter-spacing: 3px;
+				line-height: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					{{title}}
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<!-- 菜单容器 -->
+			<!--header end-->
+			<div class="mui-content user-memCard">
+				<div class="helpxq" v-if="contentType=='howCeng'">
+					<p>进入首页后，可通过地图模式或者列表模式寻找餐饮店和共享储值卡；确定好将要消费的餐饮店和使用的共享储值卡后，到店进行消费，结账时只需使用app扫码或者微信扫码，然后在结果页中选择共享储值卡，进入支付页面，输入消费金额和选择支付渠道，即可完成结账；</p>
+				</div>
+				<div class="helpxq" v-if="contentType=='howMy'">
+					<p>进入【首页-共享储值卡列表-商家售卡列表】，选择想要购买的储值卡，完成支付即可购买该张储值卡；</p>
+					<p>可开启储值卡共享功能，赚取共享收益；</p>
+				</div>
+				<div class="helpxq" v-if="contentType=='howUse'">
+					<p>结算时使用卡不多App进入【个人中心-储值卡】或者扫一扫进行付款，即可完成结账；</p>
+				</div>
+				<div class="helpxq" v-if="contentType=='howOpen'">
+					<p>进入【个人中心-储值卡列表-储值卡详情-共享折扣设定】，设定储值卡的共享折扣，点击“开启共享”按钮即可开启储值卡共享功能；</p>
+				</div>
+				<div class="helpxq" v-if="contentType=='howCash'">
+					<p>提现需要先绑定银行卡，进入【个人中心-我的钱包】，点击“银行卡”，可开始绑定银行卡流程，选择银行，输入卡号、持卡人姓名、身份证后，即可绑定银行卡，并设置提现密码；</p>
+					<p>绑定银行卡后，进入【个人中心-我的钱包】，点击“提现”按钮，即可进入提现流程，你可随时进行提现，当日只能提现一次，提现额度需高于10元，当日提现金额不能超过5000元；</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="helpContent.js" ></script>
+	</body>
+
+</html>

@@ -1,0 +1,154 @@
+.user-memCard .memCard {
+	margin: 0;
+	border-radius: 0.12rem;
+	height: 4rem;
+	box-shadow: none;
+}
+
+.user-memCard .memCard .card-content {
+	height: 3.38rem;
+	width: 6rem;
+	margin-left: 0.2rem;
+	margin-top: 0.2rem;
+	color: #fff;
+}
+
+.user-memCard .memCard .card-content .shareTag {
+	width: 3rem;
+	height: 0.35rem;
+	z-index: 100;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.35rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	position: absolute;
+	left: 0.33rem;
+	top: 0.32rem;
+}
+
+.user-memCard .memCard .card-content .card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.user-memCard .mui-table-view:before {
+	background-color: #fff;
+}
+
+.user-memCard .mui-table-view:after {
+	background-color: #fff;
+}
+
+.user-memCard .memCard .card-content .value-info {
+	height: 0.8rem;
+	width: 100%;
+	position: absolute;
+	top: 1.8rem;
+}
+.user-memCard .memCard .card-content .value-info i{
+	font-style: normal;
+}
+.user-memCard .memCard .card-content .value-info em{
+	font-style: normal;
+	font-size: 0.5rem;
+}
+.user-memCard .memCard .card-content .value-info span {
+	font-size: 0.27rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	margin-left: 0.26rem;
+	display: inline-block;
+	height: 0.83rem;
+	width: 5rem;
+	padding-top: 0.2rem;
+}
+.cardSelling .memCard .cardNum {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #4B87E0;
+	letter-spacing: 0.02rem;
+	float: right;
+	margin-right: 0.4rem;
+}
+.whatCard{
+	margin-top: 0.58rem;
+}
+.whatCard p{
+	padding: 0px;
+	margin: 0;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+	padding-left: 0.24rem;
+}
+.whatCard span {
+	padding: 0px;
+	margin: 0;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.2rem;
+	color: #B8B8B8;
+	letter-spacing: 0.02rem;
+	display: block;
+	padding-left: 0.44rem;
+	padding-right: 0.44rem;
+	margin-top: 0.27rem;
+}
+.useRules{
+	margin-top: 0.78rem;
+	padding-bottom: 0.4rem;
+}
+.useRules span{
+	padding: 0px;
+	margin: 0;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+	padding-left: 0.24rem;
+	padding-bottom: 0.27rem;
+	display: block;
+}
+.useRules p {
+	padding: 0px;
+	margin: 0;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.2rem;
+	color: #B8B8B8;
+	letter-spacing: 0.02rem;
+	display: block;
+	padding-left: 0.24rem;
+	padding-right: 0.24rem;
+}
+.immediateCard{
+	height: 1.28rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: #FFFFFF;
+}
+.immediateCard span{
+	display: inline-block;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.5rem;
+	color: #4B4949;
+	position: absolute;
+	bottom: 0.4rem;
+	left: 0.52rem;
+}
+.cardSelling .immediateCard button {
+	border: 0px;
+	width: 2.47rem;
+	height: 0.88rem;
+	font-size: 0.27rem;
+	background: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.12rem;
+	position: absolute;
+	bottom: 0.22rem;
+	right: 0.22rem;
+}

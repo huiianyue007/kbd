@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多登录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/user/login.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-text="title">
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				<button id="register" class="mui-btn mui-btn-link mui-pull-right kbd-header-link">立即注册</button>
+			</header>
+			<div class="mui-content user-login">
+				<form id='login-form' class="mui-input-group" v-show="loginType==='pwd'">
+					<div class="mui-input-row">
+						<input v-model='login.mobile' name="mobile" type="text" class="mui-input" placeholder="请输入手机号">
+					</div>
+					<div class="mui-input-row">
+						<input v-model='login.password' name="password" v-validate="''" type="password" class="mui-input-password" placeholder="请输入密码">
+					</div>
+				</form>
+				<form id='login-form' class="mui-input-group" v-show="loginType==='random'" style="display: none;">
+					<div class="mui-input-row">
+						<input v-validate="'phone'" v-model='login.mobile' type="tel" class="mui-input" placeholder="请输入手机号">
+					</div>
+					<div class="mui-input-row verifyCode">
+						<input v-model='login.verifyCode' type="tel" class="mui-input" placeholder="请输入验证码"><input type="button" class="random-btn" id="randBtn" value="点击获取" />
+					</div>
+				</form>
+				<div class="mui-content-padded">
+					<div class="forget_pwd">
+						<a id='forgetPwd' name="forgetPwd">忘记密码</a>
+					</div>
+					<button id='loginBtn' class="mui-btn mui-btn-block login-btn">登录</button>
+					<div class="link-area">
+						<a id='loginPanelLink' name="loginPanelLink" @click="changeLoginPanel" v-cloak>{{ linkTitle }}</a>
+					</div>
+				</div>
+				<div class="mui-content-padded oauth-area">
+
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<!--
+        	描述：validate
+        -->
+		<script type="text/javascript" src="../../res/js/vue/vee-validate.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/locale/zh_CN.js"></script>
+		<script type="text/javascript" src="../../res/js/vue/custVeeValidate.js"></script>
+
+		<script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="login.js"></script>
+	</body>
+
+</html>

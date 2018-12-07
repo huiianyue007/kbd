@@ -1,0 +1,82 @@
+ .mt-range {
+    position: relative;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    & > * {
+        display: flex;
+        display: -webkit-box;
+      }
+    & *[slot=start] {
+        margin-right: 5px;
+      }
+    & *[slot=end] {
+        margin-left: 5px;
+      }
+    .mt-range-content {
+      position: relative;
+      flex: 1;
+      margin-right: 30px;
+    }
+    .mt-range-runway {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: -30px;
+      border-radius: 50px;
+      border-top-color: #a9acb1;
+      border-top-style: solid;
+    }
+    .runway_tip{
+      height: 5px;
+      position: absolute;
+      width: 100%;
+      top:50%;
+      left:13px;
+      z-index: 11;
+      .runway_li{
+        &:before{
+          content: '';
+          display: block;
+          width: 1px;
+          height: 5px;
+          background: #fff;
+        }
+        &:first-child:before{
+          content: '';
+          display: block;
+          width: 1px;
+          height: 5px;
+          background: transparent;
+        }
+      }
+    }
+    .mt-range-thumb {
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background-color: #ffd006;
+      border:5px solid #fff;
+      border-radius: 100%;
+      cursor: move;
+      z-index: 12;
+      box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    }
+    .mt-range-progress {
+      position: absolute;
+      display: block;
+      background-color: #ffd006;
+      top: 50%;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+      transform: translateY(-50%);
+      width: 0;
+    }
+    .mt-range-disabled {
+      opacity: 0.5;
+    }
+  }

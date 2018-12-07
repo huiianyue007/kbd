@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>卡不多储值卡详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../res/css/mui.min.css" />
+    <link rel="stylesheet" href="../../res/css/iconfont.css" />
+    <link rel="stylesheet" href="../../res/css/base.css" />
+    <link rel="stylesheet" href="../../res/css/merchant/cardSellingDetails.css" />
+    <link rel="stylesheet" href="../../res/css/style.css" />
+    <style type="text/css">
+      .mui-card {
+        margin: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" class="cardSelling">
+      <!-- top -->
+      <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">
+					储值卡详情
+				</h1>
+        <a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+      </header>
+      <!-- 菜单容器 -->
+      <!--header end-->
+      <div class="mui-content" v-show="loaded" style="display: none;">
+        <div class="scollContent" id="scollContent">
+          <div class="user-memCard">
+            <div class="mui-card memCard">
+              <div class="mui-card-content card-content">
+                <div class="card-bg">
+                  <div class="rate">
+                    {{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+                  </div>
+                  <div class="rate">
+                    .{{ ((cardDetails.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                  </div>
+                  <div class='rate'>折</div>
+                </div>
+                <div v-cloak class="shareTag">
+                  充值{{cardDetails.cardAmount}}元
+                </div>
+                <div v-cloak class="value-info">
+                  <span v-cloak><i>立省<em>{{cardDetails.cardAmount|calaVal(cardDetails.cardRate)}}</em>元</i></span>
+                </div>
+              </div>
+              <span class="cardNum" v-cloak>今日剩余（{{cardDetails.cardCount}}）</span>
+            </div>
+          </div>
+          <div class="whatCard">
+            <p>储值卡是什么？</p>
+            <span>储值卡是商家常用的营销模式的一种，就跟优惠券一样为用户提供更多的优惠福利，用户在办理完卡后到店消费时等同于现金，并且根据储值提供的折扣进行实际使用，结算时使用卡不多App进入【个人中心-储值卡】或者扫一扫进行付款，可享受相应优惠；</span>
+          </div>
+          <div class="useRules">
+            <span>使用规则</span>
+            <p>储值卡使用范围：该储值卡只能在售卡商家处使用；</p>
+            <p>充值额度：每次充值额度为该储值卡的固定额度；</p>
+            <p>优惠举例：购买了1000元8折储值卡，即代表可以实际使用消费1428.57元的产品，也就是说享受了额外的近430元的优惠，如果开启共享功能，将会产生更大的优惠；</p>
+            <p>使用说明：使用时请用打开app【我的-储值卡】或者扫一扫进行消费，若消费时余额不足，请先进行充值；</p>
+            <p>限量说明：每家门店每日的储值卡可售数量有限，当日售完即止，如无卡，用户可在第二天购买；</p>
+          </div>
+        </div>
+        <div class="immediateCard" id="immediateCard">
+          <span v-cloak>¥{{cardDetails.cardAmount}}</span>
+          <button id="immediateCardBtn" class="mui-btn">立即办卡</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../res/js/immersed.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+    <script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+    <script type="text/javascript" src="../../res/js/mui.min.js"></script>
+    <script type="text/javascript" src="../../res/app/tools.js"></script>
+    <!-- 工具类 -->
+    <script type="text/javascript" src="../../res/app/app.js"></script>
+    <script type="text/javascript" src="cardSellingDetails.js"></script>
+  </body>
+
+</html>

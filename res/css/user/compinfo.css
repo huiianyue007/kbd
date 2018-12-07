@@ -1,0 +1,126 @@
+.user-compinfo {
+	background-color: #fff;
+}
+.mui-content-padded{
+	margin: 0;
+}
+.user-compinfo .kbd-header {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.33rem;
+	color: #4B4949;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	padding-top: 0.75rem;
+}
+
+.user-compinfo .head-container {
+	text-align: center;
+}
+
+.user-compinfo .head-container .head-box {
+	width: 100%;
+	height: 1.71rem;
+	border-radius: 50%;
+	margin-top: 0.61rem;
+	margin-bottom: 0.61rem;
+}
+.user-compinfo .head-container .head-box img{
+	width: 1.71rem;
+	height: 1.71rem;
+	border-radius: 50%;
+}
+.radioGroup {
+	width: 100%;
+	text-align: center;
+}
+
+.radioGroup .radio {
+	width: 0.44rem;
+	height: 0.44rem;
+}
+.radioGroup img:nth-child(2) {
+	margin-left: 0.74rem;
+}
+.radioGroup .radioActive{
+	width: 0.58rem;
+	height: 0.58rem;
+}
+.user-compinfo .mui-input-group {
+	border: 1px solid #E7E7E7;
+	width: 4.55rem;
+	height: 1.75rem;
+	border-radius: 0.12rem;
+	margin-left: 0.92rem;
+	margin-top: 0.57rem;
+}
+
+.user-compinfo .mui-input-group label {
+	font-size: 0.24rem;
+	letter-spacing: 0.06rem;
+	width: 1.4rem;
+	height: 0.87rem;
+	text-align: center;
+	padding-top: 0.3rem;
+}
+
+.user-compinfo .mui-input-group .mui-input-row {
+	height: 0.87rem;
+}
+.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+	width: 3.1rem;
+}
+.user-compinfo .mui-input-group .mui-input-row .mui-input {
+	height: 0.87rem;
+}
+.mui-input-group .mui-input-row:after{
+	height: 0px;
+}
+.user-compinfo .mui-input-group:before {
+	background-color: #fff;
+}
+
+.user-compinfo .mui-input-group:after {
+	background-color: #fff;
+}
+
+.user-compinfo input::-webkit-input-placeholder {
+	/*WebKit browsers*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.24rem;
+	color: #AFADAD;
+	letter-spacing: 0.04rem;
+}
+
+.user-compinfo input::-moz-input-placeholder {
+	/*Mozilla Firefox*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.24rem;
+	color: #AFADAD;
+	letter-spacing: 0.04rem;
+}
+
+.user-compinfo input::-ms-input-placeholder {
+	/*Internet Explorer*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.24rem;
+	color: #AFADAD;
+	letter-spacing: 0.04rem;
+}
+
+.user-compinfo .login-btn {
+	background: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.12rem;
+	border: none;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 6rem;
+	margin-left: 0.23rem;
+}
+
+.user-compinfo .submit-area {
+	margin-top: 2.45rem;
+}

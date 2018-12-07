@@ -1,0 +1,178 @@
+body{
+	background-color: #FDFAFA
+}
+#app{
+	background-color: #FDFAFA;
+}
+.beforePhone{
+	height: 3.66rem;
+	width: 100%;
+	text-align: center;
+}
+.beforePhone p:nth-child(1){
+	margin-top: 0.8rem;
+	font-size: 0.25rem;
+	font-family: PingFang-SC-Regular;
+	color: #4B4949;
+	letter-spacing: 0;
+	text-align: center;
+}
+.beforePhone p:nth-child(2){
+	margin-top: 0.46rem;
+	font-size: 0.44rem;
+	font-family: Arial-BoldMT;
+	color: #4B4949;
+	letter-spacing: 0;
+	text-align: center;
+}
+.beforePhone p:nth-child(3){
+	margin-top: 0.46rem;
+	font-size: 0.2rem;
+	font-family: PingFang-SC-Regular;
+	color: #4B4949;
+	letter-spacing: 0;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	text-align: center;
+}
+.mui-content-padded{
+	margin: 0;
+}
+.login-btn {
+	background: #FFD006;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+	border-radius: 0.12rem;
+	border: none;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 6rem;
+	margin-left: 0.23rem;
+}
+
+.verifyCode input {
+	width: 4rem;
+	border: 0px;
+	height: 0.9rem;
+	font-size: 0.25rem;
+	padding-left: 0.36rem;	
+	margin-bottom: 0.75rem;
+}
+
+.verifyCode .random-btn {
+	height: 0.52rem;
+	width: 1.8rem;
+	margin-top: 0.18rem;
+	font-size: 0.24rem;
+	background-color: #FFD006;
+	border: 0rem;
+	border-radius:0.15rem;
+	float: right;
+	text-align: center;
+	margin-right: 0.3rem;
+}
+.verifyCode p{
+	display: block;
+	height: 0.8rem;
+	font-size: 0.2rem;
+	padding-left: 0.4rem;
+	background-color: #FDFAFA;
+	padding-top: 0.25rem;
+}
+.user-login{
+	margin-bottom: 0.75rem;
+}
+.user-login .mui-input-group:before {
+	height: 0px;
+}
+
+.user-login .mui-input-group:after {
+	height: 0px;
+}
+.mui-input-group .mui-input-row {
+	height: 0.87rem;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+	height: 0.87rem;
+	padding-top: 0.4rem;
+	padding-left: 0.28rem;
+	padding-bottom: 0.19rem;
+	padding-right: 0rem;
+	font-size: 0.25rem;
+}
+
+.mui-input-group .mui-input-row:after {
+	left: 0.19rem;
+}
+
+.link-area {
+	display: block;
+	margin-top: 0.47rem;
+	text-align: center;
+}
+
+.mui-input-row .mui-input-clear~.mui-icon-clear,
+.mui-input-row .mui-input-password~.mui-icon-eye,
+.mui-input-row .mui-input-speech~.mui-icon-speech {
+	top: 0.35rem;
+}
+.user-login .verifyCode input {
+	width: 4.1rem;
+	border: 0px;
+	font-size: 0.23rem;
+}
+
+.user-login .verifyCode .random-btn {
+	height: 0.53rem;
+	width: 1.8rem;
+	margin-top: 0.22rem;
+	font-size: 0.18rem;
+	background-color: #FFD006;
+	border: 0rem;
+	border-radius:0.15rem;
+	float: right;
+	margin-right: 0.28rem;
+	text-align: center;
+	padding: 0px;
+}
+.user-login input::-webkit-input-placeholder {
+	/*WebKit browsers*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+}
+
+.user-login input::-moz-input-placeholder {
+	/*Mozilla Firefox*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+}
+
+.user-login input::-ms-input-placeholder {
+	/*Internet Explorer*/
+	font-family: PingFang-SC-Regular;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+}

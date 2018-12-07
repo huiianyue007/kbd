@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>卡不多我的储值卡详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../../res/css/mui.min.css" />
+    <link rel="stylesheet" href="../../../res/css/iconfont.css" />
+    <link rel="stylesheet" href="../../../res/css/base.css" />
+    <link rel="stylesheet" href="../../../res/css/user/card/memcardDetail.css" />
+    <link rel="stylesheet" href="../../../res/css/style.css" />
+
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- top -->
+      <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title kbd-header">
+					储值卡详情
+				</h1>
+        <a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+      </header>
+      <!-- 菜单容器 -->
+      <!--header end-->
+      <div class="mui-content user-memCard white-bg" id="memCard" style="display: none;">
+        <div class="mui-card memCard">
+          <!--内容区-->
+          <div class="mui-card-content card-content">
+            <!--<img :src="memCard.cardRate|imgSrc" class="card-bg" />-->
+            <div class="card-bg" v-if = 'memCard.cardRate'>
+                <div class="rate">
+                  {{ ((memCard.cardRate * 1).toFixed(1) + '').split('.')[0] }}
+                </div>
+                <div class="rate">
+                  .{{ ((memCard.cardRate * 1).toFixed(1) + '').split('.')[1] }}
+                </div>
+                <div class = 'rate'>折</div>
+              </div>
+            <span class="text-cardname" v-text="memCard.shopName"></span>
+            <div class="value-info">
+              <span v-cloak>余额：{{memCard.cardAmount}}</span>
+              <span v-cloak>累计收益：{{memCard.shareAmountIn}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="mui-content">
+          <ul class="mui-table-view mui-table-view-chevron kpd-list">
+            <li class="mui-table-view-cell list-li" v-tap="[openDiscountSetting,memCard.id]">
+              <a class="mui-navigate-right text">
+                共享折扣设定
+                <i class="info">{{memCard.shareRate}}折</i>
+              </a>
+            </li>
+            <li class="mui-table-view-cell list-li" v-tap="[openConsumptions,memCard.id]">
+              <a class="mui-navigate-right text">
+                消费明细
+              </a>
+            </li>
+            <li class="mui-table-view-cell list-li" v-tap="[openCardInstructions]">
+              <a class="mui-navigate-right text">
+                使用说明
+              </a>
+            </li>
+            <li class="mui-table-view-cell list-li">
+              <a class="text">
+                年化收益
+                <i class="info fixedRight">{{memCard.shareEarnRate}}%</i>
+              </a>
+            </li>
+            <li class="mui-table-view-cell list-li">
+              <a class="text">
+                共享状态
+                <div :class="['mui-switch', 'mui-switch-mini', {'mui-active': memCard.isCardShare === '1'}]" id = 'select'>
+                  <div class="mui-switch-handle"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn" id="btn">
+          <button class="mui-btn" id="chongzhi">充值</button>
+          <button class="mui-btn" id="maidan">买单</button>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="../../../res/js/immersed.js"></script>
+    <script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+    <script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+    <script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+    <script type="text/javascript" src="../../../res/app/tools.js"></script>
+    <!-- 工具类 -->
+    <script type="text/javascript" src="../../../res/app/app.js"></script>
+    <script type="text/javascript" src="memcardDetail.js"></script>
+  </body>
+
+</html>

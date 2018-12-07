@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>地图按钮层</title>
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/icons-extra.css" />
+		<style type="text/css">
+			html,
+			body {
+				overflow: hidden;
+				background-color: transparent;
+			}
+			
+			.bottom_btn{
+				bottom: 16px;
+			}
+			
+			.bottom_btn img {
+				width: 100%;
+			}
+			
+			.location {
+				position:absolute;
+				width:53px;
+				height:53px;
+				left:10px;
+				padding: 0px 0px;
+			}
+			
+			.scancode{
+				position:absolute;
+				width:53px;
+				height:53px;
+				right:10px;
+				padding: 0px 0px;
+			}
+			/*.ma_top_10{
+				margin-top: ;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="bottom_btn location" onclick="userLocation()">
+			<img src="../../res/img/map/location.png">
+		</div>
+		<div class="bottom_btn scancode" onclick="qrscan()">
+			<img src="../../res/img/map/qrcode.png">
+		</div>
+	</body>
+	<script type="text/javascript" src="../../res/js/mui.min.js" ></script>
+	<script type="text/javascript" src="map_sub.js" ></script>
+</html>

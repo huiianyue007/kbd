@@ -1,0 +1,2586 @@
+@charset "UTF-8";
+@font-face {
+    //  font-family: "BY-Forvi-C3.00";
+    //  src: url('../fonts/xiniublack.ttf') format('truetype');
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+body {
+    background-color: #fff;
+}
+
+header {
+    .kbd-header-link {
+        font-family: PingFang-SC-Regular;
+        font-size: 14px!important;
+        color: #4B4949!important;
+        letter-spacing: 1.41px;
+    }
+}
+
+//空页面的样式
+.emptyData {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    img {
+        width: 222px;
+        height: 235px;
+        display: block;
+        margin: 0 auto;
+    }
+    span {
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #4B4949;
+        letter-spacing: 2.1px;
+    }
+    button {
+        margin-top: 80px;
+        display: block;
+        width: 94%;
+        height: 50px;
+        background: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        border-radius: 8px;
+        border: 0;
+        left: 3%;
+    }
+    i {
+        font-family: PingFang-SC-Regular;
+        font-size: 11px;
+        color: #ADADAD;
+        letter-spacing: 0;
+        font-style: normal;
+        display: block;
+        margin-top: 8px;
+    }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    &.left {
+        justify-content: flex-start;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+    &.middle {
+        align-items: center;
+    }
+    &.bottom {
+        align-items: flex-end;
+    }
+    * {
+        flex: 1;
+    }
+    .auto {
+        flex: 0 auto;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.header {
+    font-size: 0.4rem;
+}
+
+.bg-yellow {
+    background-color: #FDD804;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+
+/*修改框架样式   start*/
+
+.mui-bar {
+    box-shadow: none;
+    background: #FFFFFF;
+    color: #4B4949;
+    a,
+    span {
+        color: #4B4949;
+    }
+}
+
+.mui-bar .mui-icon {
+    font-size: 18px;
+}
+
+.mui-bar-nav {
+    box-shadow: none;
+    z-index: 105;
+}
+
+.mui-content {
+    //  background-color: #fff;
+}
+
+.white-bg {
+    background-color: #FFF;
+}
+
+.mui-btn {
+    border: none;
+}
+
+.mui-table-view-cell a {
+    line-height: 30px;
+}
+
+// 列表通用样式
+.kpd-list {
+    .list-li {
+        .text {
+            font-size: 14px;
+            color: #4B4949;
+            letter-spacing: 2.1px;
+        }
+        .info {
+            float: right;
+            font-style: normal;
+            font-size: 16px;
+            color: #B2B2B2;
+            letter-spacing: 2.4px;
+            margin-right: -25px;
+            font-size: 15px;
+        }
+    }
+}
+
+// 登陆页面
+.user-login {
+    background-color: #fff;
+    .mui-input-group:before {
+        height: 0px;
+    }
+    .mui-input-group:after {
+        height: 0px;
+    }
+    input::-webkit-input-placeholder {
+        /*WebKit browsers*/
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    input::-moz-input-placeholder {
+        /*Mozilla Firefox*/
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    input::-ms-input-placeholder {
+        /*Internet Explorer*/
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    .login-btn {
+        background: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        border-radius: 8px;
+        border: none;
+        font-family: PingFang-SC-Medium;
+        font-size: 20px;
+        color: #4B4949;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+    .link-area a {
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #B0AEAE;
+        letter-spacing: 1.41px;
+    }
+    .forget_pwd a {
+        padding-bottom: 30px;
+        margin-top: -10px;
+        text-align: right;
+        display: block;
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #AFADAD;
+        letter-spacing: 2.1px;
+        width: 90px;
+        float: right;
+    }
+    .verifyCode input {
+        //      height: 52px;
+        width: 70%;
+        border: 0px;
+        font-size: 14px;
+    }
+    .verifyCode .random-btn {
+        height: 30px;
+        width: 100px;
+        margin-top: 10px;
+        font-size: 14px;
+        background-color: #FFD006;
+        border: 0px;
+        border-radius: 6px;
+        float: right;
+        margin-right: 5px;
+        text-align: center;
+    }
+}
+
+// 登陆页面
+.user-compinfo {
+    background-color: #fff;
+    .kbd-header {
+        font-family: PingFang-SC-Medium;
+        font-size: 20px;
+        color: #4B4949;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    .head-container {
+        text-align: center;
+        height: 100px;
+        margin: 30px 0px;
+        padding: 0px;
+        .head-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+        }
+    }
+    .gender-container {
+        text-align: center;
+        border: 1px solid red;
+        .mui-radio {
+            display: inline-grid;
+        }
+    }
+    .mui-input-group {
+        border: 1px solid #E7E7E7;
+        width: 301px;
+        height: 100px;
+        margin: auto;
+        border-radius: 8px;
+        label {
+            font-size: 16px;
+            letter-spacing: 1.95px;
+            width: 30%;
+            height: 50px;
+            line-height: 30px;
+        }
+        .mui-input-row {
+            height: 50px;
+            line-break: 50px;
+            .mui-input {
+                height: 50px;
+                line-break: 50px;
+            }
+        }
+        &:before {
+            background-color: #fff;
+        }
+        &:after {
+            background-color: #fff;
+        }
+    }
+    input::-webkit-input-placeholder {
+        /*WebKit browsers*/
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    input::-moz-input-placeholder {
+        /*Mozilla Firefox*/
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    input::-ms-input-placeholder {
+        /*Internet Explorer*/
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #AFADAD;
+        letter-spacing: 1.95px;
+    }
+    .login-btn {
+        background: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        border-radius: 8px;
+        border: none;
+        font-family: PingFang-SC-Medium;
+        font-size: 20px;
+        color: #4B4949;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+    .submit-area {
+        margin-top: 152px;
+    }
+}
+
+// 个人首页
+.user-home {
+    background-color: #fff;
+    // 用户信息界面
+    .user-info {
+        height: 178px;
+        width: 120px;
+        float: left;
+        .user-img {
+            margin-top: 30px;
+            text-align: center;
+            border: 0px;
+            img {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+        }
+        .user-name {
+            font-family: PingFang-SC-Medium;
+            font-size: 20px;
+            color: #433D3D;
+            letter-spacing: 0;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .user-sex {
+            text-align: center;
+            margin-top: 8px;
+            img {
+                width: 19px;
+                position: absolute;
+                top: 130px;
+                left: 5%;
+            }
+            span {
+                display: inline-block;
+                width: 40px;
+                position: absolute;
+                top: 130px;
+                background-color: #C0C0C0;
+                border-radius: 4px;
+                font-family: PingFang-SC-Medium;
+                font-size: 10px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                left: 12%;
+            }
+        }
+    }
+    //按钮样式
+    .btn {
+        float: right;
+        .closeBtn {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            top: 30px;
+            right: 68px;
+            img {
+                width: 31px;
+                height: 31px;
+            }
+        }
+        .settingBtn {
+            width: 31px;
+            height: 31px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            img {
+                width: 31px;
+                height: 31px;
+            }
+        }
+    }
+    // 按钮窗口
+    .user-value {
+        clear: both;
+        height: 60px;
+        padding: 10px;
+        background-color: #fff;
+        .info-card {
+            .value {
+                font-weight: bold;
+                font-size: 19px;
+                color: #433D3D;
+                display: block;
+                text-align: center;
+            }
+            .text {
+                font-size: 13px;
+                color: #919191;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    // 列表
+    .user-function {
+        border-top: 4px #F6F6F6 solid;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        padding-top: 20px;
+        .link {
+            padding: 12px;
+            .iconfont {
+                font-size: 25px;
+                position: absolute;
+                left: 4rem;
+            }
+            img {
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: -5px;
+            }
+            a {
+                font-family: PingFang-SC-Medium;
+                font-size: 20px;
+                color: #433D3D;
+                letter-spacing: 0;
+                text-align: center;
+            }
+        }
+        .mui-table-view-cell:after {
+            background-color: #fff;
+        }
+    }
+}
+
+// 提现
+.cashout-content {
+    .verifyCode input {
+        height: 52px;
+        width: 70%;
+        border: 0px;
+        font-size: 14px;
+    }
+    .verifyCode .random-btn {
+        height: 30px;
+        width: 100px;
+        margin-top: 4px;
+        font-size: 14px;
+        background-color: #FFD006;
+        border: 0px;
+        border-radius: 6px;
+    }
+}
+
+// 储值卡卡片
+.user-memCard {
+    .memcard-overview {
+        background-color: #fff;
+        padding: 5px;
+        span {
+            margin-left: 5px;
+            font-size: 13px;
+            color: #4B4949;
+            letter-spacing: 1.31px;
+            text-align: center;
+            &:nth-child(2) {
+                float: right;
+                margin-right: 5px;
+            }
+        }
+    }
+    .memCard {
+        height: 200px;
+        /* background: #FDD804; */
+        /* border-radius: 15px; */
+        box-shadow: none;
+        .card-content {
+            height: 200px;
+            padding: 10px;
+            color: #fff;
+            .shareTag {
+                width: 47px;
+                height: 20px;
+                text-align: center;
+                z-index: 100;
+                background: #B17738;
+                border-radius: 10px;
+                font-family: PingFang-SC-Regular;
+                font-size: 11px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                position: absolute;
+                right: 12px;
+            }
+            .card-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .text-cardname {
+                position: absolute;
+            }
+            .float-area {
+                text-align: right;
+                padding: 0px;
+                height: 84px;
+                margin: 38px -2px;
+                line-height: 55px;
+            }
+            .text-int {
+                font-family: "BY-Forvi-C3.00";
+                position: absolute;
+                top: 87px;
+                width: 100%;
+                font-size: 266px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+            }
+            .text-dot {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 38px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                margin-right: -20px;
+            }
+            .text-float {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 70px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                right: 10%;
+            }
+            .text-zhe {
+                font-size: 36px;
+                color: #FFFFFF;
+            }
+            .value-info {
+                height: 48px;
+                width: 100%;
+                margin: 0px -10px;
+                position: absolute;
+                top: 107px;
+                /* background: rgba(177, 119, 56, 0.55); */
+                /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.26); */
+                line-height: 48px;
+                span {
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    margin: 0px 10px;
+                    &:nth-child(2) {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    .mui-table-view:before {
+        background-color: #fff;
+    }
+    .mui-table-view:after {
+        background-color: #fff;
+    }
+}
+
+.shareCard {
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    padding: 11px 15px 20px;
+    box-sizing: border-box;
+    h2 {
+        font-family: PingFang-SC-Medium;
+        font-size: 16px;
+        color: #FFD006;
+        margin-top: -10px;
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+    .cardinfo {
+        margin: 0px -15px;
+        color: #FFF;
+        font-weight: bold;
+        .title {
+            font-family: Arial-BoldMT;
+            font-size: 42px;
+            color: #FFF;
+        }
+        .info-ul {
+            height: 66px;
+            color: #fff;
+            line-height: 2em;
+            .info-li {
+                .li-price {
+                    font-family: ArialMT;
+                    font-size: 25px;
+                    color: #FFFFFF;
+                }
+                .li-text {
+                    font-family: PingFang-SC-Regular;
+                    font-size: 13px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .card {
+        padding: 8px 0;
+        .cardImg {
+            width: 180px;
+        }
+        p {
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            font-family: PingFang-SC-Regular;
+            font-size: 13px;
+            color: #433D3D;
+        }
+        .card_title {
+            font-size: 16px;
+            color: #4B4949;
+        }
+        .card_input {
+            width: 60%;
+            margin: 20px auto 0;
+            height: 50px;
+            .title {
+                font-size: 47px;
+                color: #4B4949;
+                .icon {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .card_tip {
+        font-size: 11px;
+        color: #918B8B;
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    .thumb {
+        position: absolute;
+        width: 90px;
+        height: 50px;
+        text-align: center;
+        color: #4B4949;
+        line-height: 40px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        background: url('../img/common/discount.png') no-repeat top center/cover;
+        top: -60px;
+        left: -35px;
+    }
+    .discount {
+        height: 120px;
+        width: 80%;
+        margin: 20px auto 0;
+    }
+    .submit_btn {
+        margin-top: 25px;
+    }
+    button {
+        position: absolute;
+        left: 2%;
+        bottom: 30px;
+        height: 47px;
+        width: 96%;
+        background-color: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        color: #4B4949;
+        font-size: 20px;
+    }
+}
+
+// 商家卡片
+.map-merchantCard {
+    .merchantCard {
+        margin: 0px 0px 0px;
+        padding: 0px;
+        background: #FFF;
+        height: 112px;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        &.mui-active {
+            color: inherit;
+            border-bottom: none;
+        }
+        .card-content {
+            height: 108px;
+            padding: 20px;
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #424242;
+            letter-spacing: 0;
+            .merchname {
+                position: absolute;
+                left: 10px;
+                top: 5px;
+                font-family: PingFang-SC-Medium;
+                font-size: 16px;
+                color: #424242;
+                letter-spacing: 0;
+            }
+            .distance {
+                position: absolute;
+                left: 10px;
+                top: 22px;
+                font-family: PingFang-SC-Regular;
+                font-size: 11px;
+                color: #9FA2B3;
+                letter-spacing: 0;
+            }
+            .head {
+                position: absolute;
+                left: 10px;
+                top: 60px;
+                width: 34px;
+                height: 34px;
+                border-radius: 17px;
+                overflow: hidden;
+                img {
+                    width: 34px;
+                }
+            }
+            .useperson {
+                position: absolute;
+                left: 48px;
+                top: 65px;
+                font-family: ArialMT;
+                font-size: 41px;
+                color: #424242;
+                letter-spacing: 1.79px;
+                i {
+                    font-family: PingFangSC-Regular;
+                    font-style: normal;
+                    font-size: 11px;
+                    color: #9FA2B3;
+                    letter-spacing: 0;
+                    margin-left: -12px;
+                }
+            }
+            .value-info {
+                height: 108px;
+                width: 77px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                line-height: 48px;
+                background: #FDD804;
+                font-family: PingFang-SC-Regular;
+                font-size: 15px;
+                color: #FFF;
+                letter-spacing: 0;
+                text-align: center;
+                span {
+                    font-family: ArialMT;
+                    font-size: 47px;
+                    color: #FFF;
+                    letter-spacing: 0;
+                    margin: 0px 3px;
+                    position: absolute;
+                    left: 0px;
+                    top: 45px;
+                    i {
+                        color: #FFF;
+                        font-family: PingFangSC-Regular;
+                        font-style: normal;
+                        font-size: 21px;
+                        letter-spacing: 0;
+                        em {
+                            font-style: normal;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mui-table-view:before {
+        background-color: #fff;
+    }
+    .mui-table-view:after {
+        background-color: #fff;
+    }
+}
+
+// 商家卡片
+.user-merchantCard {
+    .merchantCard {
+        height: 100px;
+        background: #FFF;
+        border-radius: 15px;
+        .card-content {
+            height: 200px;
+            padding: 10px;
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #424242;
+            letter-spacing: 0;
+            .merchname {
+                font-family: PingFang-SC-Medium;
+                font-size: 16px;
+                color: #424242;
+                letter-spacing: 0;
+                position: absolute;
+            }
+            .distance {
+                position: absolute;
+                left: 10px;
+                top: 27px;
+                font-family: PingFang-SC-Regular;
+                font-size: 11px;
+                color: #9FA2B3;
+                letter-spacing: 0;
+            }
+            .head {
+                position: absolute;
+                left: 10px;
+                top: 58px;
+                width: 34px;
+                height: 34px;
+                border-radius: 17px;
+                overflow: hidden;
+                img {
+                    width: 34px;
+                }
+            }
+            .useperson {
+                position: absolute;
+                left: 48px;
+                top: 64px;
+                font-family: ArialMT;
+                font-size: 41px;
+                color: #424242;
+                letter-spacing: 1.79px;
+                i {
+                    font-family: PingFangSC-Regular;
+                    font-style: normal;
+                    font-size: 11px;
+                    color: #9FA2B3;
+                    letter-spacing: 0;
+                    margin-left: -12px;
+                }
+            }
+            .value-info {
+                height: 108px;
+                width: 77px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                line-height: 48px;
+                background: #FDD804;
+                font-family: PingFang-SC-Regular;
+                font-size: 15px;
+                color: #FFF;
+                letter-spacing: 0;
+                text-align: center;
+                span {
+                    font-family: ArialMT;
+                    font-size: 47px;
+                    color: #FFF;
+                    letter-spacing: 0;
+                    margin: 0px 3px;
+                    position: absolute;
+                    left: 0px;
+                    top: 45px;
+                    i {
+                        color: #FFF;
+                        font-family: PingFangSC-Regular;
+                        font-style: normal;
+                        font-size: 21px;
+                        letter-spacing: 0;
+                        em {
+                            font-style: normal;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mui-table-view:before {
+        background-color: #fff;
+    }
+    .mui-table-view:after {
+        background-color: #fff;
+    }
+}
+
+// 我的消息界面
+.mymessage {
+    background-color: #fff;
+    .header-title {
+        font-family: "PingFang-SC-Medium";
+        font-size: 26px;
+        color: #4B4949;
+        letter-spacing: 2.62px;
+        opacity: 0.85;
+        text-align: left;
+        margin-left: 12px;
+        margin-bottom: 30px;
+    }
+    .msglink-list {
+        background: #FFFFFF;
+        box-shadow: 0 4px 6px 0 rgba(239, 239, 239, 0.83);
+        border-radius: 8px;
+        & ul:before {
+            background-color: #fff;
+        }
+        & ul:after {
+            background-color: #fff;
+        }
+        .mui-media-body {
+            padding: 3px 15px;
+            font-family: PingFang-SC-Regular;
+            font-size: 16px;
+            color: #4B4949;
+            letter-spacing: 1.61px;
+        }
+        .mui-navigate-right {
+            img {
+                height: 36px;
+                width: 36px;
+            }
+        }
+    }
+}
+
+//设置页面
+.user-setting {
+    margin-top: 11px;
+    .mui-table-view-cell {
+        padding: 15px 15px;
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #4B4949;
+        letter-spacing: 2.1px;
+        .rightContent {
+            padding-right: 20px;
+        }
+    }
+    .mui-table-view-cell:after {
+        background-color: #D8D8D8;
+    }
+    .setBtn {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        button {
+            background: #FFD006;
+            box-shadow: 0 2px 4px 0 #F5D136;
+            border-radius: 8px;
+            margin-left: 2%;
+            width: 96%;
+            font-family: PingFang-SC-Medium;
+            font-size: 20px;
+            color: #4B4949;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+//我的钱包
+.wallet-home {
+    background-color: #FCF9F9;
+    // 用户信息界面
+    .wallet-info {
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        background-color: #FFD006;
+        .wallet-money {
+            font-family: PingFang-SC-Medium;
+            font-size: 54px;
+            color: #FFFFFF;
+            img {
+                width: 21px;
+                height: 21px;
+                margin-top: 8px;
+                margin-right: 8px;
+                float: right;
+                z-index: 100;
+            }
+        }
+    }
+    // 按钮窗口
+    .wallet-value {
+        clear: both;
+        height: 60px;
+        padding: 10px;
+        background-color: #fff;
+        .info-card {
+            .value {
+                opacity: 0.54;
+                font-family: PingFang-SC-Medium;
+                font-size: 16px;
+                color: #4B4949;
+                letter-spacing: 1.61px;
+                display: block;
+                text-align: center;
+            }
+            .text {
+                opacity: 0.54;
+                font-family: PingFang-SC-Regular;
+                font-size: 10px;
+                color: #4B4949;
+                letter-spacing: 1.61px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .mui-table-view {
+        margin-top: 16px;
+        .mui-table-view-cell {
+            padding: 15px 15px;
+            font-family: PingFang-SC-Regular;
+            font-size: 14px;
+            color: #4B4949;
+            letter-spacing: 2.1px;
+        }
+        .mui-table-view-cell:after {
+            background-color: #D8D8D8;
+        }
+    }
+    .mui-table-view:after {
+        height: 0px;
+    }
+    .mui-table-view:before {
+        height: 0px;
+    }
+    .cash-btn {
+        border: 0px;
+        background-color: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        border-radius: 8px;
+        font-family: PingFang-SC-Medium;
+        font-size: 20px;
+        color: #4B4949;
+        letter-spacing: 3px;
+        position: absolute;
+        width: 96%;
+        bottom: 26px;
+        left: 2%;
+    }
+    .cashText {
+        font-family: PingFang-SC-Regular;
+        font-size: 11px;
+        color: #ADADAD;
+        letter-spacing: 1.65px;
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+//银行卡
+.mui-content {
+    background-color: #FFFFFF;
+    .bankmessage {
+        width: 96%;
+        margin-left: 2%;
+        height: 131px;
+        background-color: #FFD006;
+        overflow: hidden;
+        border-radius: 8px;
+        dd {
+            margin-left: 16px;
+            margin-top: 5%;
+            color: #FFFFFF;
+            span {
+                opacity: 0.76;
+                font-family: PingFang-SC-Medium;
+                font-size: 20px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 28px;
+                display: block;
+                margin-bottom: 16px;
+            }
+            i {
+                font-style: normal;
+                opacity: 0.76;
+                font-family: PingFang-SC-Medium;
+                font-size: 30px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 42px;
+            }
+        }
+    }
+    .drawalse {
+        width: 96%;
+        margin-left: 2%;
+        height: 47px;
+        background-color: #FFD006;
+        box-shadow: 0 2px 4px 0 #F5D136;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 16px;
+    }
+    .drawalse a {
+        display: block;
+        font-family: PingFang-SC-Medium;
+        font-size: 20px;
+        color: #4B4949;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 47px;
+    }
+}
+
+//常见问题
+.helpFaq {
+    background-color: #FCF9F9;
+    .mui-table-view:before {
+        height: 0px;
+    }
+    .mui-table-view:after {
+        height: 0px;
+    }
+    .mui-table-view-cell:after {
+        background-color: #D8D8D8;
+    }
+    .mui-table-view-cell {
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #4B4949;
+        letter-spacing: 2.1px;
+        padding: 15px 15px;
+        i {
+            font-style: normal;
+            float: right;
+            margin-right: 26px;
+        }
+    }
+    .tanceng {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #000;
+        filter: alpha(opacity=15);
+        -moz-opacity: 0.15;
+        opacity: 0.15;
+        display: "";
+    }
+    .remindTrue {
+        background-color: #FFFFFF;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 80%;
+        height: 134px;
+        color: #666;
+        z-index: 200000;
+        position: absolute;
+        margin: 0 auto;
+        left: 10%;
+    }
+    .remindTrue dt {
+        height: 134px;
+        color: #252525;
+        display: block;
+        line-height: 23px;
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .remindTrue dt p {
+        height: 100px;
+        font-family: PingFang-SC-Regular;
+        font-size: 20px;
+        color: #252525;
+        letter-spacing: 0;
+        text-align: center;
+    }
+    .remindTrue dt p i {
+        clear: both;
+        display: block;
+        font-family: PingFang-SC-Regular;
+        font-size: 20px;
+        color: #252525;
+        letter-spacing: 0;
+        text-align: center;
+        margin-top: 20px;
+        font-style: normal;
+    }
+    .remindTrue dd {
+        bottom: 0;
+        height: 48px;
+        display: block;
+    }
+    .cancel {
+        font-size: 16px;
+        color: #4B4949;
+        width: 50%;
+        height: 48px;
+        line-height: 48px;
+        background: #F6F4F4;
+        position: absolute;
+        left: 0px;
+        border-bottom-left-radius: 8px;
+        text-align: center;
+    }
+    .telPhone {
+        font-size: 16px;
+        color: #252525;
+        display: block;
+        float: right;
+        width: 60%;
+        height: 48px;
+        line-height: 48px;
+        background: #FFD006;
+        border-bottom-right-radius: 8px;
+        text-align: center;
+    }
+}
+
+//商家卡蹭卡、购卡
+.shop-merchantCard {
+    .navbar {
+        text-align: center;
+        z-index: 105;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        top: 44px;
+        background-color: #FFFFFF;
+        ul {
+            display: inline-block;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 50%;
+            line-height: 40px;
+            height: 40px;
+            font-family: PingFang-SC-Medium;
+            font-size: 14px;
+            color: #A0A0A0;
+            letter-spacing: 1.41px;
+            text-align: center;
+            img {
+                height: 18px;
+                width: 18px;
+                position: absolute;
+                top: 10px;
+            }
+        }
+        .navbarActive {
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #979595;
+            letter-spacing: 1.61px;
+            text-align: center;
+        }
+    }
+    .navbarSecond {
+        text-align: center;
+        border-bottom: 1px solid #E7E2E2;
+        z-index: 105;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 83px;
+        background-color: #FFFFFF;
+        ul {
+            display: inline-block;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 33.33333%;
+            line-height: 50px;
+            height: 50px;
+            font-family: PingFang-SC-Medium;
+            font-size: 14px;
+            color: #A0A0A0;
+            letter-spacing: 1.41px;
+            text-align: center;
+        }
+        .liActive {
+            font-family: PingFang-SC-Medium;
+            font-size: 14px;
+            color: #FDD804;
+            letter-spacing: 1.41px;
+        }
+    }
+    .tanceng {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 101;
+        background-color: #000;
+        filter: alpha(opacity=30);
+        -moz-opacity: 0.3;
+        opacity: 0.3;
+        display: "";
+    }
+    .merchantCardContent {
+        margin-top: 42px;
+    }
+    .memCard {
+        height: 180px;
+        box-shadow: none;
+        .card-content {
+            height: 180px;
+            padding: 10px;
+            color: #fff;
+            .shareTag {
+                width: 100px;
+                height: 20px;
+                text-align: center;
+                z-index: 100;
+                font-family: PingFang-SC-Medium;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                position: absolute;
+                left: 10px;
+            }
+            .card-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .text-cardname {
+                position: absolute;
+            }
+            .float-area {
+                text-align: right;
+                padding: 0px;
+                height: 84px;
+                margin: 38px -2px;
+                line-height: 55px;
+            }
+            .text-int {
+                font-family: "BY-Forvi-C3.00";
+                position: absolute;
+                top: 87px;
+                width: 100%;
+                font-size: 266px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+            }
+            .text-dot {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 38px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                margin-right: -20px;
+            }
+            .text-float {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 70px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                right: 10%;
+            }
+            .text-zhe {
+                font-size: 36px;
+                color: #FFFFFF;
+            }
+            .value-info {
+                height: 48px;
+                width: 100%;
+                margin: 0px -10px;
+                position: absolute;
+                top: 95px;
+                line-height: 48px;
+                span {
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    margin: 0px 10px;
+                    &:nth-child(2) {
+                        float: right;
+                    }
+                    i {
+                        width: 120px;
+                        font-style: normal;
+                        position: absolute;
+                        line-height: 20px;
+                        top: 2px;
+                        font-family: PingFangSC-Regular;
+                        font-size: 12px;
+                        color: #FFFFFF;
+                        letter-spacing: 1px;
+                        img {
+                            height: 13px;
+                            width: 13px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 24px;
+                        }
+                        em {
+                            font-size: 9px;
+                            width: 30px;
+                            font-style: normal;
+                            position: absolute;
+                            top: 21px;
+                            left: 13px;
+                        }
+                    }
+                    img {
+                        height: 42px;
+                        width: 42px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .buyCard {
+        height: 160px;
+        box-shadow: none;
+        .card-content {
+            height: 160px;
+            padding: 10px;
+            color: #fff;
+            .shareTag {
+                width: 100px;
+                height: 20px;
+                z-index: 100;
+                font-family: PingFang-SC-Medium;
+                font-size: 18px;
+                color: #FFFFFF;
+                position: absolute;
+            }
+            .card-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .text-cardname {
+                position: absolute;
+            }
+            .float-area {
+                text-align: right;
+                padding: 0px;
+                height: 84px;
+                margin: 38px -2px;
+                line-height: 55px;
+            }
+            .text-int {
+                font-family: "BY-Forvi-C3.00";
+                position: absolute;
+                top: 87px;
+                width: 100%;
+                font-size: 266px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+            }
+            .text-dot {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 38px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                margin-right: -20px;
+            }
+            .text-float {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 70px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                right: 10%;
+            }
+            .text-zhe {
+                font-size: 36px;
+                color: #FFFFFF;
+            }
+            .value-info {
+                height: 48px;
+                width: 100%;
+                margin: 0px -10px;
+                position: absolute;
+                top: 95px;
+                line-height: 48px;
+                span {
+                    font-family: PingFang-SC-Medium;
+                    letter-spacing: 0;
+                    margin: 0px 10px;
+                    i {
+                        width: 300px;
+                        font-style: normal;
+                        position: absolute;
+                        line-height: 20px;
+                        top: -2px;
+                        font-family: PingFang-SC-Regular;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        em {
+                            width: 30px;
+                            font-style: normal;
+                            font-family: ArialMT;
+                            font-size: 28px;
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shopDetailBtn {
+    //  margin-top: 12px;
+    font-family: PingFang-SC-Regular;
+    font-size: 14px;
+    color: #4B4949;
+    letter-spacing: 2.05px;
+}
+
+.merchantCard {
+    .header {
+        display: inline;
+        padding: 0px;
+    }
+    .headerLi {
+        display: inline;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 5px;
+        padding-bottom: 8px;
+        color: #4B4949;
+        letter-spacing: 1.61px;
+        margin: 0px 5px;
+        &:nth-child(2) {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    .headerLiActive {
+        font-weight: bold;
+        border-bottom: 2px solid #4B4949;
+    }
+}
+
+//商家详情页面
+.shopDetail {
+    width: 100%;
+    height: 260px;
+    background-color: #FFFFFF;
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+    i,
+    em {
+        font-style: normal;
+    }
+    .shopTitle {
+        height: 80px;
+        img {
+            height: 56px;
+            width: 56px;
+            border-radius: 50%;
+            margin-top: 25px;
+            margin-left: 8px;
+        }
+        i {
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #4B4949;
+            letter-spacing: 1.61px;
+            position: absolute;
+            top: 80px;
+            left: 70px;
+            width: 200px;
+        }
+        em {
+            opacity: 0.65;
+            font-family: PingFang-SC-Regular;
+            font-size: 13px;
+            color: #4B4949;
+            letter-spacing: 1.31px;
+        }
+    }
+    .shopPhone {
+        margin-top: 20px;
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #4B4949;
+        letter-spacing: 1.31px;
+        padding-left: 16px;
+        em {
+            position: absolute;
+            left: 55px;
+        }
+    }
+    .shopAddr {
+        margin-top: 8px;
+        font-family: PingFang-SC-Regular;
+        font-size: 13px;
+        color: #4B4949;
+        letter-spacing: 1.31px;
+        padding-left: 16px;
+        width: 200px;
+        em {
+            position: absolute;
+            left: 55px;
+            width: 160px;
+        }
+    }
+    .callPhone {
+        position: absolute;
+        display: inline-block;
+        width: 80px;
+        height: 60px;
+        right: 0px;
+        top: 145px;
+        border-left: 1px solid #e3dede;
+        text-align: center;
+        img {
+            height: 33px;
+            width: 33px;
+            margin-top: 10px;
+        }
+    }
+}
+
+//蹭卡支付
+.rubCardPay {
+    .payMoney {
+        p {
+            display: block;
+            height: 70px;
+            border-bottom: 1px solid #EAE8E8;
+            padding-top: 20px;
+            font-family: PingFang-SC-Regular;
+            font-size: 26px;
+            color: #9B9EA2;
+            letter-spacing: 0;
+            padding-left: 16px;
+            input {
+                font-family: ArialMT;
+                font-size: 26px;
+                color: #433D3D;
+                height: 48px;
+                letter-spacing: 0;
+                width: 260px;
+                padding-left: 2px;
+                border: 0px;
+            }
+        }
+    }
+    .payInfo {
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+        i,
+        em {
+            font-style: normal;
+        }
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #EAE8E8;
+        p {
+            font-family: PingFang-SC-Regular;
+            font-size: 12px;
+            color: #433D3D;
+            letter-spacing: 0;
+            padding-left: 16px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            i {
+                font-family: PingFang-SC-Medium;
+                font-size: 12px;
+                color: #221F1F;
+                letter-spacing: 0;
+                padding-right: 16px;
+                float: right;
+            }
+            em {
+                font-family: PingFang-SC-Medium;
+                font-size: 12px;
+                color: #676161;
+                letter-spacing: 0;
+                padding-right: 16px;
+                float: right;
+            }
+            &:nth-child(2) {
+                color: #676161;
+            }
+            &:nth-child(3) {
+                color: #676161;
+            }
+        }
+    }
+    .payType {
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #433D3D;
+            letter-spacing: 0;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+            li {
+                list-style: none;
+                height: 40px;
+                line-height: 40px;
+                padding: 13px 13px;
+                img {
+                    width: 36px;
+                    height: 36px;
+                    float: left;
+                    margin-top: 2px;
+                    margin-right: 13px;
+                }
+                span {
+                    text-align: left;
+                    font-family: PingFang-SC-Regular;
+                    font-size: 14px;
+                    color: #949494;
+                    letter-spacing: 0;
+                    img {
+                        float: right;
+                        width: 22px;
+                        height: 22px;
+                        margin-top: 8px;
+                        margin-right: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .tanceng {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #000;
+        filter: alpha(opacity=15);
+        -moz-opacity: 0.15;
+        opacity: 0.15;
+        display: "";
+    }
+    .remindTrue {
+        background-color: #FFFFFF;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 80%;
+        height: 134px;
+        color: #666;
+        z-index: 200000;
+        position: absolute;
+        margin: 0 auto;
+        left: 10%;
+        top: 30%;
+    }
+    .remindTrue dt {
+        height: 90px;
+        color: #252525;
+        display: block;
+        line-height: 23px;
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    .remindTrue dt p {
+        height: 100px;
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #252525;
+        letter-spacing: 1.41px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .remindTrue dt p i {
+        clear: both;
+        display: block;
+        font-family: PingFang-SC-Regular;
+        font-size: 20px;
+        color: #252525;
+        letter-spacing: 0;
+        text-align: center;
+        margin-top: 20px;
+        font-style: normal;
+    }
+    .remindTrue dd {
+        bottom: 0;
+        height: 48px;
+        display: block;
+    }
+    .cancel {
+        font-size: 16px;
+        color: #4B4949;
+        width: 50%;
+        height: 48px;
+        line-height: 48px;
+        background: #F6F4F4;
+        position: absolute;
+        left: 0px;
+        border-bottom-left-radius: 8px;
+        text-align: center;
+    }
+    .cashSuccess {
+        font-size: 16px;
+        color: #252525;
+        display: block;
+        float: right;
+        width: 60%;
+        height: 48px;
+        line-height: 48px;
+        background: #FFD006;
+        border-bottom-right-radius: 8px;
+        text-align: center;
+    }
+    .payButton {
+        width: 100%;
+        margin-top: 40px;
+        button {
+            width: 40%;
+            height: 50px;
+            border-radius: 7px;
+            &:nth-child(1) {
+                border: 1px solid #B8B8B8;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 10px;
+            }
+            &:nth-child(2) {
+                border: 0px;
+                background-color: #FDD804;
+                float: right;
+                margin-right: 8px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .memCard {
+        height: 180px;
+        box-shadow: none;
+        .card-content {
+            height: 180px;
+            padding: 10px;
+            color: #fff;
+            .shareTag {
+                width: 100px;
+                height: 20px;
+                text-align: center;
+                z-index: 100;
+                font-family: PingFang-SC-Medium;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                position: absolute;
+                left: 10px;
+            }
+            .card-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .text-cardname {
+                position: absolute;
+            }
+            .float-area {
+                text-align: right;
+                padding: 0px;
+                height: 84px;
+                margin: 38px -2px;
+                line-height: 55px;
+            }
+            .text-int {
+                font-family: "BY-Forvi-C3.00";
+                position: absolute;
+                top: 87px;
+                width: 100%;
+                font-size: 266px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+            }
+            .text-dot {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 38px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                margin-right: -20px;
+            }
+            .text-float {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 70px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                right: 10%;
+            }
+            .text-zhe {
+                font-size: 36px;
+                color: #FFFFFF;
+            }
+            .value-info {
+                height: 48px;
+                width: 100%;
+                margin: 0px -10px;
+                position: absolute;
+                top: 95px;
+                line-height: 48px;
+                span {
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    margin: 0px 10px;
+                    &:nth-child(2) {
+                        float: right;
+                    }
+                    i {
+                        width: 120px;
+                        font-style: normal;
+                        position: absolute;
+                        line-height: 20px;
+                        top: 2px;
+                        font-family: PingFangSC-Regular;
+                        font-size: 12px;
+                        color: #FFFFFF;
+                        letter-spacing: 1px;
+                        img {
+                            height: 13px;
+                            width: 13px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 24px;
+                        }
+                        em {
+                            font-size: 9px;
+                            width: 30px;
+                            font-style: normal;
+                            position: absolute;
+                            top: 21px;
+                            left: 13px;
+                        }
+                    }
+                    img {
+                        height: 42px;
+                        width: 42px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//蹭卡支付
+.cardSelling {
+    .payMoney {
+        height: 40px;
+        p {
+            display: block;
+            height: 30px;
+            text-align: center;
+            padding-top: 20px;
+            font-family: ArialMT;
+            font-size: 34px;
+            color: #433D3D;
+            letter-spacing: 0;
+        }
+    }
+    .payInfo {
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+        i,
+        em {
+            font-style: normal;
+        }
+        margin-top: 8px;
+        border-bottom: 1px solid #EAE8E8;
+        p {
+            font-family: PingFang-SC-Regular;
+            font-size: 12px;
+            color: #433D3D;
+            letter-spacing: 0;
+            padding-left: 16px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            i {
+                font-family: PingFang-SC-Medium;
+                font-size: 12px;
+                color: #221F1F;
+                letter-spacing: 0;
+                padding-right: 16px;
+                float: right;
+            }
+            em {
+                font-family: PingFang-SC-Medium;
+                font-size: 12px;
+                color: #676161;
+                letter-spacing: 0;
+                padding-right: 16px;
+                float: right;
+            }
+            &:nth-child(2) {
+                color: #676161;
+            }
+            &:nth-child(3) {
+                color: #676161;
+            }
+        }
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #433D3D;
+            letter-spacing: 0;
+        }
+    }
+    .payType {
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #433D3D;
+            letter-spacing: 0;
+            padding-top: 8px;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+            li {
+                list-style: none;
+                height: 40px;
+                line-height: 40px;
+                padding: 13px 13px;
+                img {
+                    width: 36px;
+                    height: 36px;
+                    float: left;
+                    margin-top: 2px;
+                    margin-right: 13px;
+                }
+                span {
+                    text-align: left;
+                    font-family: PingFang-SC-Regular;
+                    font-size: 14px;
+                    color: #949494;
+                    letter-spacing: 0;
+                    img {
+                        float: right;
+                        width: 22px;
+                        height: 22px;
+                        margin-top: 8px;
+                        margin-right: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .payButton {
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        button {
+            border: 0px;
+            width: 94%;
+            height: 50px;
+            margin-left: 3%;
+            background: #FFD006;
+            box-shadow: 0 2px 4px 0 #F5D136;
+            border-radius: 8px;
+        }
+    }
+    .immediateCard {
+        margin-top: 8px;
+        height: 60px;
+        width: 100%;
+        button {
+            border: 0px;
+            width: 144px;
+            height: 50px;
+            font-size: 16px;
+            background: #FFD006;
+            box-shadow: 0 2px 4px 0 #F5D136;
+            border-radius: 8px;
+            float: right;
+            margin-right: 8px;
+        }
+        span {
+            font-family: PingFang-SC-Medium;
+            font-size: 39px;
+            color: #4B4949;
+            height: 50px;
+            vertical-align: middle;
+            letter-spacing: 0;
+            padding-left: 16px;
+            display: inline-block;
+            padding-top: 16px;
+        }
+    }
+    .whatCard {
+        padding-left: 8px;
+        padding-right: 8px;
+        p {
+            padding: 0px;
+            margin: 0;
+            font-family: PingFang-SC-Medium;
+            font-size: 14px;
+            color: #4B4949;
+            letter-spacing: 1.41px;
+        }
+        span {
+            padding: 0px;
+            margin: 0;
+            font-family: PingFang-SC-Regular;
+            font-size: 11px;
+            color: #B8B8B8;
+            letter-spacing: 1.11px;
+            display: block;
+            line-height: 16px;
+        }
+    }
+    .useRules {
+        margin-top: 2px;
+        padding-left: 8px;
+        padding-right: 8px;
+        p {
+            padding: 0px;
+            margin: 0;
+            font-family: PingFang-SC-Regular;
+            font-size: 11px;
+            color: #B8B8B8;
+            letter-spacing: 1.11px;
+            line-height: 16px;
+        }
+        span {
+            padding: 0px;
+            margin: 0;
+            font-family: PingFang-SC-Medium;
+            font-size: 14px;
+            color: #4B4949;
+            letter-spacing: 1.41px;
+        }
+    }
+    .memCard {
+        height: 180px;
+        box-shadow: none;
+        .cardNum {
+            font-family: PingFang-SC-Medium;
+            font-size: 16px;
+            color: #4B87E0;
+            letter-spacing: 0;
+            float: right;
+        }
+        .card-content {
+            height: 160px;
+            padding: 10px;
+            color: #fff;
+            .shareTag {
+                width: 150px;
+                height: 20px;
+                text-align: center;
+                z-index: 100;
+                font-family: PingFang-SC-Medium;
+                font-size: 21px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                position: absolute;
+                left: -10px;
+            }
+            .card-bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .text-cardname {
+                position: absolute;
+            }
+            .float-area {
+                text-align: right;
+                padding: 0px;
+                height: 84px;
+                margin: 38px -2px;
+                line-height: 55px;
+            }
+            .text-int {
+                font-family: "BY-Forvi-C3.00";
+                position: absolute;
+                top: 87px;
+                width: 100%;
+                font-size: 266px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+            }
+            .text-dot {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 38px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                margin-right: -20px;
+            }
+            .text-float {
+                font-family: "BY-Forvi-C3.00";
+                font-size: 70px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                right: 10%;
+            }
+            .text-zhe {
+                font-size: 36px;
+                color: #FFFFFF;
+            }
+            .value-info {
+                height: 48px;
+                width: 100%;
+                margin: 0px -10px;
+                position: absolute;
+                top: 80px;
+                line-height: 48px;
+                span {
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    margin: 0px 10px;
+                    &:nth-child(2) {
+                        float: right;
+                    }
+                    i {
+                        width: 300px;
+                        font-style: normal;
+                        position: absolute;
+                        line-height: 20px;
+                        top: 2px;
+                        font-family: PingFangSC-Regular;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        letter-spacing: 1px;
+                        img {
+                            height: 13px;
+                            width: 13px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 24px;
+                        }
+                        em {
+                            font-style: normal;
+                            font-family: ArialMT;
+                            font-size: 28px;
+                            color: #FFFFFF;
+                            letter-spacing: 0.6px;
+                            line-height: 20px;
+                        }
+                    }
+                    img {
+                        height: 42px;
+                        width: 42px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//精选活动
+.activity {
+    width: 100%;
+    margin-top: 10px;
+    .activity_card {
+        width: 96%;
+        height: 198px;
+        margin-left: 2%;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        dl,
+        dt,
+        dd {
+            margin: 0px;
+            padding: 0px;
+        }
+        img {
+            width: 100%;
+            height: 152px;
+        }
+        span {
+            display: block;
+            width: 200px;
+            background-color: #FFD006;
+            text-align: center;
+            font-family: PingFang-SC-Regular;
+            font-size: 15px;
+            color: #FFFFFF;
+            position: absolute;
+            left: 20px;
+            margin-top: 10px;
+        }
+        em {
+            display: block;
+            width: 54px;
+            border-radius: 4px;
+            background-color: #FF7777;
+            text-align: center;
+            font-family: PingFang-SC-Regular;
+            font-size: 13px;
+            color: #FFFFFF;
+            position: absolute;
+            right: 20px;
+            font-style: normal;
+            margin-top: 10px;
+        }
+        i {
+            display: block;
+            width: 54px;
+            border-radius: 4px;
+            background-color: #6a6a6a;
+            text-align: center;
+            font-family: PingFang-SC-Regular;
+            font-size: 13px;
+            color: #FFFFFF;
+            position: absolute;
+            right: 20px;
+            font-style: normal;
+            margin-top: 10px;
+        }
+    }
+}
+
+// 意见反馈
+.proposal {
+    padding-left: 15px;
+    padding-right: 15px;
+    .title {
+        font-family: PingFang-SC-Regular;
+        font-size: 14px;
+        color: #4B4949;
+        letter-spacing: 0;
+        padding-bottom: 10px;
+    }
+    .proposal_content {
+        padding-top: 15px;
+        .queationType {
+            background-color: #FFFFFF;
+            padding-bottom: 15px;
+            p {
+                padding: 0px;
+                margin: 0px;
+                padding-top: 15px;
+                padding-left: 8px;
+                img {
+                    width: 14px;
+                }
+                span {
+                    padding-left: 8px;
+                    font-family: PingFang-SC-Regular;
+                    font-size: 14px;
+                    color: #4B4949;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+    .question_content {
+        padding-top: 15px;
+        .textarea_content {
+            background-color: #FFFFFF;
+            padding: 8px;
+            .input_title {
+                font-family: PingFang-SC-Regular;
+                font-size: 13px;
+                color: #4B4949;
+                letter-spacing: 0;
+                padding-bottom: 8px;
+            }
+            .input_desc {
+                padding: 5px;
+            }
+            .input_tip {
+                font-family: PingFang-SC-Regular;
+                font-size: 11px;
+                color: #BDBCBC;
+                letter-spacing: 0;
+                text-align: right;
+            }
+            input[type=color],
+            input[type=date],
+            input[type=datetime-local],
+            input[type=datetime],
+            input[type=email],
+            input[type=month],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=time],
+            input[type=url],
+            input[type=week],
+            select,
+            textarea {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .question_img {
+        padding-top: 15px;
+        .pic_content {
+            background-color: #FFFFFF;
+            padding-bottom: 15px;
+            ul {
+                list-style: none;
+                height: 90px;
+                padding: 0px;
+                margin: 0px;
+                li {
+                    list-style: none;
+                    height: 90px;
+                    display: inline;
+                    padding: 0px;
+                    margin: 0px;
+                    padding-left: 8px;
+                    img {
+                        margin-top: 20px;
+                        width: 50px;
+                    }
+                    img:nth-child(2) {
+                        width: 16px;
+                        position: absolute;
+                        float: right;
+                        padding: 0px;
+                        margin-top: 15px;
+                        margin-left: -12px;
+                    }
+                }
+            }
+        }
+    }
+    .question_btn {
+        margin-top: 20px;
+        button {
+            background-color: #FFD006;
+            box-shadow: 0 2px 4px 0 #F5D136;
+            border-radius: 8px;
+            font-family: PingFang-SC-Medium;
+            font-size: 20px;
+            color: #4B4949;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+//蹭卡通知
+.slipCardNotice {
+    .unread {
+        color: #4B4949;
+    }
+    .read {
+        color: #4B4949;
+        opacity: 0.7;
+    }
+    .unreadmarkup {
+        width: 8px;
+        height: 8px;
+        float: right;
+        background-color: #fc5c03;
+        border-radius: 50%;
+    }
+    .title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+    .content {
+        padding: 4px;
+        padding-left: 8px;
+        font-size: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .operation {
+        display: block;
+        text-align: center;
+        font-size: 15px;
+    }
+}

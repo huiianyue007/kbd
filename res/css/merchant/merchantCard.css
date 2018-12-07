@@ -1,0 +1,285 @@
+body,.merchantCardContent,.memCard{
+	background-color: #FDFAFA;
+}
+.mui-card{
+	margin: 0;
+}
+.merchantCard .header {
+	display: inline;
+	padding: 0px;
+}
+.merchantCard .headerLi {
+	display: inline;
+	font-size: 0.27rem;
+	width: 0.74rem;
+	color: #4B4949;
+	padding-left: 0.12rem;
+	padding-right: 0.12rem;
+	padding-bottom: 0.1rem;
+	letter-spacing: 0.06rem;
+}
+
+.merchantCard .headerLi:nth-child(2) {
+	margin-left: 0.4rem;
+}
+
+.merchantCard .headerLiActive {
+	font-weight: bold;
+	border-bottom: 0.04rem solid #4B4949;
+}
+.shopDetailBtn {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.28rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+}
+.shop-merchantCard .navbar {
+	text-align: center;
+	z-index: 105;
+	position: fixed;
+	width: 100%;
+	height: 0.7rem;
+	top: 0.68rem;
+	background-color: #FFFFFF;
+}
+
+.shop-merchantCard .navbar ul {
+	display: inline-block;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.shop-merchantCard .navbar li {
+	list-style: none;
+	float: left;
+	width: 50%;
+	line-height: 0.7rem;
+	height: 0.7rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.24rem;
+	color: #A0A0A0;
+	letter-spacing: 0.06rem;
+	text-align: center;
+}
+
+.shop-merchantCard .navbar li img {
+	height: 0.3rem;
+	width: 0.3rem;
+	position: absolute;
+	top: 0.2rem;
+	margin-left: 0.1rem;
+}
+
+.shop-merchantCard .navbar .navbarActive {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #979595;
+	letter-spacing: 0.02rem;
+	text-align: center;
+}
+
+.shop-merchantCard .navbarSecond {
+	text-align: center;
+	border-bottom: 0.01rem solid #E7E2E2;
+	z-index: 105;
+	position: fixed;
+	width: 100%;
+	height: 0.87rem;
+	top: 1.38rem;
+	background-color: #FFFFFF;
+}
+
+.shop-merchantCard .navbarSecond ul {
+	display: inline-block;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.shop-merchantCard .navbarSecond li {
+	list-style: none;
+	float: left;
+	width: 33.33333%;
+	line-height: 0.86rem;
+	height: 0.86rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #A0A0A0;
+	letter-spacing: 0.02rem;
+	text-align: center;
+}
+
+.shop-merchantCard .navbarSecond .liActive {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #FDD804;
+	letter-spacing: 0.02rem;
+}
+.shop-merchantCard .tanceng {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 101;
+	background-color: #000;
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+	display: "";
+}
+.shop-merchantCard .merchantCardContent {
+	padding-top: 0.8rem;
+}
+.shop-merchantCard .memCard {
+	height: 3.7rem;
+	box-shadow: none;
+}
+
+.shop-merchantCard .memCard .card-content {
+	height: 3.6rem;
+	width: 6rem;
+	margin-left: 0.18rem;
+	color: #fff;
+}
+
+.shop-merchantCard .memCard .card-content .card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.shop-merchantCard .memCard .card-content .shareTag {
+	width: 2rem;
+	height: 0.18rem;
+	z-index: 100;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0.27rem;
+	top: 0.25rem;
+}
+.shop-merchantCard .memCard .card-content .value-info {
+	height: 0.75rem;
+	width: 100%;
+	position: absolute;
+	top: 1.9rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span img {
+	height: 0.55rem;
+	width: 0.55rem;
+	margin-left: 0.22rem;
+	margin-top: 0.09rem;
+	border-radius: 50%;
+	
+}
+
+.shop-merchantCard .memCard .card-content .value-info span:nth-child(2) {
+	margin-top: 0.3rem;
+	float: right;
+	margin-right: 0.2rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i {
+	font-style: normal;
+	position: absolute;
+	width: 3rem;
+	top: 0.1rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.24rem;
+	color: #FFFFFF;
+	letter-spacing: 0.04rem;
+	padding-left: 0.2rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i img {
+	height: 0.26rem;
+	width: 0.26rem;
+	border-radius: 50%;
+	position: absolute;
+	top: 0.2rem;
+	left: -0.02rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i em {
+	font-size: 0.16rem;
+	font-style: normal;
+	position: absolute;
+	top: 0.335rem;
+	left: 0.5rem;
+	letter-spacing: 0.02rem;
+}
+.user-memCard .memCard {
+	margin: 0;
+	border-radius: 0.12rem;
+	height: 3.6rem;
+	box-shadow: none;
+}
+
+.user-memCard .memCard .card-content {
+	height: 3.38rem;
+	width: 6rem;
+	margin-left: 0.2rem;
+	margin-top: 0.2rem;
+	color: #fff;
+}
+
+.user-memCard .memCard .card-content .shareTag {
+	width: 3rem;
+	height: 0.35rem;
+	z-index: 100;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.35rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	position: absolute;
+	left: 0.33rem;
+	top: 0.32rem;
+}
+
+.user-memCard .memCard .card-content .card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.user-memCard .mui-table-view:before {
+	background-color: #fff;
+}
+
+.user-memCard .mui-table-view:after {
+	background-color: #fff;
+}
+
+.user-memCard .memCard .card-content .value-info {
+	height: 0.83rem;
+	width: 100%;
+	position: absolute;
+	top: 1.77rem;
+}
+.user-memCard .memCard .card-content .value-info i{
+	font-style: normal;
+}
+.user-memCard .memCard .card-content .value-info em{
+	font-style: normal;
+	font-size: 0.5rem;
+}
+.user-memCard .memCard .card-content .value-info span {
+	font-size: 0.27rem;
+	color: #FFFFFF;
+	letter-spacing: 0.02rem;
+	margin-left: 0.26rem;
+	display: inline-block;
+	height: 0.83rem;
+	width: 5rem;
+	padding-top: 0.2rem;
+}

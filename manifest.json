@@ -1,0 +1,701 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "H50E50D3A", /*应用的标识，创建应用时自动生成，勿手动修改*/
+  "name": "卡不多", /*应用名称，程序桌面图标名称*/
+  "version": {
+    "name": "1.1.3", /*应用版本名称*/
+    "code": "113"
+  },
+  "description": "", /*应用描述信息*/
+  "icons": {
+    "72": "icon.png"
+  },
+  "launch_path": "view/main.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+  "developer": {
+    "name": "", /*开发者名称*/
+    "email": "", /*开发者邮箱地址*/
+    "url": ""
+  },
+  "permissions": {
+    "Cache": {
+      "description": "管理应用缓存"
+    },
+    "Console": {
+      "description": "跟踪调试输出日志"
+    },
+    "Webview": {
+      "description": "窗口管理"
+    },
+    "Contacts": {
+      "description": "访问系统联系人信息"
+    },
+    "Events": {
+      "description": "应用扩展事件"
+    },
+    "Maps": {},
+    "Payment": {},
+    "OAuth": {},
+    "Push": {},
+    "Share": {}
+  },
+  "plus": {
+    "statusbar": {
+      "immersed": true,
+      "style": "dark"
+    },
+    "splashscreen": {
+      "autoclose": true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+      "waiting": false
+    },
+    "popGesture": "close", /*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+    "runmode": "normal", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+    "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+    "distribute": {
+      "plugins": {
+        "share": {
+          "weixin": {
+            "appid": "wx40105a6c52a601f1",
+            "appsecret": "78127153ea50546304cf2f239d5c4cc8"
+          }
+        },
+        "push": {
+          "igexin": {
+            "appid": "IK2zmAMfFJAgcnNuK5rXm2",
+            "appkey": "sxXa49ifYf5fLMU3ETl0Q1",
+            "appsecret": "eleypws01s7CgR9quLCvb7"
+          }
+        },
+        "oauth": {
+          "weixin": {
+            "appid": "wx40105a6c52a601f1",
+            "appsecret": "78127153ea50546304cf2f239d5c4cc8"
+          }
+        },
+        "payment": {
+          "weixin": {
+            "description": "微信支付",
+            "appid": "wx40105a6c52a601f1"
+          },
+          "alipay": {
+            "description": "阿里支付",
+            "scheme": ""
+          }
+        },
+        "maps": {
+          "baidu": {
+            "appkey_ios": "0rOqykb6uvQBb6UjdyVlP5ZVa8Ch1Pre",
+            "appkey_android": "lnBlVBvVGKNEGuG3BLjWlu4wDbfv53Tj",
+            "appkey": "",
+            "description": ""
+          }
+        }
+      },
+      "apple": {
+        "appid": "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+        "mobileprovision": "", /*iOS应用打包配置文件*/
+        "password": "", /*iOS应用打包个人证书导入密码*/
+        "p12": "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+        "devices": "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+        "frameworks": [], /*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+        "plistcmds": [
+          "Set :NSCameraUsageDescription 申请拍照/摄像权限，用户在结算时扫描商户二维码，请允许。",
+          "Set :NSMicrophoneUsageDescription 录制音频文件/语音识别",
+          "Set :NSPhotoLibraryUsageDescription 选择/保存图片用于您选取一张照片作为用户头像，请允许访问。",
+          "Set :NSLocationWhenInUseUsageDescription 为了保证您能正确的查找附近的商家信息，请允许访问位置信息。",
+          "Set :NSLocationAlwaysUsageDescription 为了保证您能正确的查找附近的商家信息，请允许访问位置信息。",
+          "Set :NSLocationAlwaysAndWhenInUseUsageDescription 为了保证您能正确的查找附近的商家信息，请允许访问位置信息。"
+        ],
+        "urltypes": [
+          {
+            "urlidentifier": "cn.kabuduo.yh",
+            "urlschemes": [
+              "kbdyh"
+            ]
+          }
+        ]
+      },
+      "google": {
+        "packagename": "", /*Android应用包名，如io.dcloud.HelloH5*/
+        "keystore": "", /*Android应用打包使用的密钥库文件*/
+        "password": "", /*Android应用打包使用密钥库中证书的密码*/
+        "aliasname": "", /*Android应用打包使用密钥库中证书的别名*/
+        "schemes": [
+          "kbdyh"
+        ],
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>"
+        ]
+      },
+      "orientation": [
+        "portrait-primary"
+      ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+      "icons": {
+        "ios": {
+          "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+          /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+          "iphone": {
+            "normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+            "retina": "", /*iPhone4程序图标，分辨率：114x114*/
+            /*iPhone4S/5/6程序图标，分辨率：120x120*//*iPhone6 Plus程序图标，分辨率：180x180*/
+            "spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+            "spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+            /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+            "settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+            /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+            "app@2x": "unpackage/res/icons/120x120.png",
+            "app@3x": "unpackage/res/icons/180x180.png",
+            "settings@3x": "unpackage/res/icons/87x87.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "spotlight@3x": "unpackage/res/icons/120x120.png",
+            "notification@3x": "unpackage/res/icons/60x60.png",
+            "notification@2x": "unpackage/res/icons/40x40.png"
+          },
+          "ipad": {
+            "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+            "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+            /*iPad iOS7程序图标，分辨率：76x76*//*iPad iOS7高分屏程序图标，分辨率：152x152*/
+            "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+            "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+            /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*//*iPad设置页面程序图标，分辨率：29x29*/
+            "app": "unpackage/res/icons/76x76.png",
+            "app@2x": "unpackage/res/icons/152x152.png",
+            "settings": "unpackage/res/icons/29x29.png",
+            "proapp@2x": "unpackage/res/icons/167x167.png",
+            "spotlight": "unpackage/res/icons/40x40.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "notification": "unpackage/res/icons/20x20.png",
+            "notification@2x": "unpackage/res/icons/40x40.png"
+          },
+          "appstore": "unpackage/res/icons/1024x1024.png"
+        },
+        "android": {
+          "mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+          "ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+          "hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+          "xhdpi": "unpackage/res/icons/96x96.png", /*720P高分屏程序图标，分辨率：96x96*/
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png"
+        }
+      },
+      "splashscreen": {
+        "ios": {
+          "iphone": {
+            "default": "", /*iPhone3启动图片选，分辨率：320x480*/
+            /*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+            "retina40": "unpackage/res/startPage/5.png", /*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+            "retina47": "unpackage/res/startPage/6.png", /*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+            "retina55": "unpackage/res/startPage/6p竖屏.png", /*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+            "retina55l": "",
+            "iphonex": "unpackage/res/startPage/X.png"
+          },
+          "ipad": {
+            "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+            "portrait-retina": "", /*iPad高分屏竖屏图片，分辨率：1536x2008*/
+            "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+            "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+            "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+            "portrait-retina7": "", /*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+            "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+            "landscape-retina7": ""
+          }
+        },
+        "android": {
+          "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+          "ldpi": "", /*大屏启动图片，分辨率：320x442*/
+          "hdpi": "unpackage/res/startPage/高分屏.png", /*高分屏启动图片，分辨率：480x762*/
+          "xhdpi": "unpackage/res/startPage/720p.png", /*720P高分屏启动图片，分辨率：720x1242*/
+          "xxhdpi": "unpackage/res/startPage/1080p.png"
+        }
+      },
+      "debug": false
+    },
+    "ads": {
+      "rp": false,
+      "splash": false,
+      "push": false
+    },
+    "adid": "128790240405"
+  },
+  "dependencies": {
+		"pages": {
+			"view/main.html": {
+				"resources": [
+					"view/map/map.html"
+				],
+				"refer": [
+					"view/user/home.html",
+					"view/msg/mymsg.html",
+					"view/merchant/merchants.html",
+					"view/user/login.html",
+					"view/user/bootPage.html",
+					"view/ad/screenAD.html"
+				],
+				"priority": 0
+			},
+			"view/map/map.html": {
+				"resources": [
+					"view/map/map_sub.html",
+					"view/map/map_header.html",
+					"view/map/map_center.html",
+					"view/map/map_busi.html",
+					"view/ad/screenAD.html",
+					"res/app/tools.js"
+				],
+				"refer": [
+					"view/scan/qrscan.html",
+					"view/user/login.html",
+					"view/version/version.html"
+				],
+				"priority": 0
+			},
+			"view/user/help/helpTranslate.html": {
+				"resources": [],
+				"refer": [
+					"view/user/help/commonProblem.html",
+					"view/user/help/question.html"
+				],
+				"priority": 0
+			},
+			"view/user/home.html": {
+				"resources": [
+					"res/img/common/noLogin.png",
+					"res/fonts/iconfont.ttf"
+				],
+				"refer": [
+					"view/user/help/helpTranslate.html",
+					"view/user/help/helpFaq.html",
+					"view/user/card/memcards.html",
+					"view/scan/qrscan.html",
+					"view/user/help/setup.html",
+					"view/user/setting/setup.html",
+					"view/user/personalInfo.html",
+					"view/user/wallet/mywallet.html",
+					"view/user/wallet/income.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/help/helpFaq.html": {
+				"resources": [],
+				"refer": [
+					"view/user/help/question.html",
+					"view/user/help/commonProblem.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/card/memcards.html": {
+				"resources": [],
+				"refer": [
+					"view/user/card/memcardDetail.html",
+					"view/user/home.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/msg/mymsg.html": {
+				"resources": [],
+				"refer": [
+					"view/msg/msg_sys.html",
+					"view/msg/msg_card.html",
+					"view/msg/msg_activity.html"
+				],
+				"priority": 0
+			},
+			"view/user/login.html": {
+				"resources": [
+					"res/fonts/iconfont.ttf",
+					"res/css/style.css",
+					"res/js/vue/locale/zh_CN.js",
+					"res/js/vue/vee-validate.js",
+					"res/js/vue/custVeeValidate.js",
+					"res/app/tools.js",
+					"res/css/user/login.css"
+				],
+				"refer": [
+					"view/user/register.html",
+					"view/user/forgetpwd.html"
+				],
+				"priority": 0
+			},
+			"view/user/setting/setup.html": {
+				"resources": [],
+				"refer": [
+					"view/user/setting/setPhone.html",
+					"view/user/forgetpwd.html",
+					"view/user/login.html",
+					"view/user/compinfo.html",
+					"view/user/wallet/cashpassword.html",
+					"view/user/authentication.html",
+					"view/user/wallet/bankInfo.html"
+				],
+				"priority": 0
+			},
+			"view/user/card/memcardDetail.html": {
+				"resources": [],
+				"refer": [
+					"view/user/card/consumptions.html",
+					"view/user/card/cardInstructions.html",
+					"view/user/card/discountSetting.html",
+					"view/pay/rechargePay.html",
+					"view/pay/storedCardPay.html",
+					"view/user/card/memcards.html",
+					"view/user/login.html",
+					"view/scan/qrscan.html"
+				],
+				"priority": 0
+			},
+			"view/user/wallet/mywallet.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/cashout.html",
+					"view/user/wallet/bankInfo.html",
+					"view/user/wallet/cashpassword.html",
+					"view/user/wallet/bankcard.html",
+					"view/user/wallet/withdrawcash.html",
+					"view/user/wallet/income.html",
+					"view/user/wallet/cashInstructions.html",
+					"view/user/authentication.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/wallet/bankInfo.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/cashpassword.html"
+				],
+				"priority": 0
+			},
+			"view/user/wallet/withdrawcash.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/cashpassword.html",
+					"view/user/wallet/withdrawcashDetails.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/register.html": {
+				"resources": [],
+				"refer": [
+					"view/user/compinfo.html",
+					"view/user/register.html",
+					"view/user/userRules.html"
+				],
+				"priority": 0
+			},
+			"view/user/wallet/income.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/incomeDetails.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/wallet/bankcard.html": {
+				"resources": [],
+				"refer": [
+					"view/user/authentication.html"
+				],
+				"priority": 0
+			},
+			"view/map/map_header.html": {
+				"resources": [
+					"res/app/app.js",
+					"view/map/map_header.js",
+					"res/img/map/msg.png",
+					"res/css/app.css",
+					"res/img/map/list.png",
+					"res/css/iconfont.css",
+					"res/css/mui.min.css",
+					"res/js/vue/vue.dev.js",
+					"res/js/mui.min.js",
+					"res/img/common/kbdLogo.png",
+					"res/img/map/me.png"
+				],
+				"refer": [
+					"view/user/home.html",
+					"view/merchant/merchants.html",
+					"view/msg/mymsg.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/authentication.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/bankInfoUpdate.html",
+					"view/user/wallet/cashpassword.html"
+				],
+				"priority": 0
+			},
+			"view/user/help/commonProblem.html": {
+				"resources": [],
+				"refer": [
+					"view/user/help/helpContent.html"
+				],
+				"priority": 0
+			},
+			"view/merchant/merchants.html": {
+				"resources": [
+					"view/merchant/merchants_sub.html"
+				],
+				"refer": [
+					"view/merchant/merchantCard.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/merchant/merchantCard.html": {
+				"resources": [],
+				"refer": [
+					"view/merchant/shopDetails.html",
+					"view/pay/rubCardPay.html",
+					"view/merchant/cardSellingDetails.html",
+					"view/scan/qrscan.html"
+				],
+				"priority": 0
+			},
+			"view/map/map_busi.html": {
+				"resources": [
+					"view/map/map_busi.js",
+					"res/js/vue/vue-tap.js",
+					"res/app/app.js"
+				],
+				"refer": [
+					"view/merchant/merchantCard.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/pay/rubCardPay.html": {
+				"resources": [],
+				"refer": [
+					"view/merchant/merchantCard.html",
+					"view/pay/paycardsuccess.html",
+					"view/pay/paystoredsuccess.html"
+				],
+				"priority": 0
+			},
+			"view/user/card/consumptions.html": {
+				"resources": [],
+				"refer": [
+					"view/user/wallet/incomeDetails.html"
+				],
+				"priority": 0
+			},
+			"view/scan/qrscan.html": {
+				"resources": [
+					"view/scan/qrback.html"
+				],
+				"refer": [
+					"view/scan/qrerror.html",
+					"view/scan/noCard.html",
+					"view/pay/storedCardPay.html",
+					"view/pay/rubCardPay.html",
+					"view/merchant/merchantCard.html"
+				],
+				"priority": 0
+			},
+			"view/scan/noCard.html": {
+				"resources": [],
+				"refer": [
+					"view/merchant/merchantCard.html"
+				],
+				"priority": 0
+			},
+			"view/merchant/cardSellingDetails.html": {
+				"resources": [],
+				"refer": [
+					"view/pay/cardSelling.html"
+				],
+				"priority": 0
+			},
+			"view/pay/cardSelling.html": {
+				"resources": [],
+				"refer": [
+					"view/pay/paysuccess.html",
+					"view/pay/paystoredsuccess.html",
+					"view/pay/paycardsuccess.html"
+				],
+				"priority": 0
+			},
+			"view/msg/msg_activity.html": {
+				"resources": [],
+				"refer": [
+					"view/broswer/web.html"
+				],
+				"priority": 0
+			},
+			"view/msg/msg_sys.html": {
+				"resources": [],
+				"refer": [
+					"view/broswer/web.html"
+				],
+				"priority": 0
+			},
+			"view/pay/storedCardPay.html": {
+				"resources": [
+					"res/css/mui.min.css",
+					"res/css/iconfont.css",
+					"res/css/style.css",
+					"res/css/base.css",
+					"res/css/pay/rubCardPay.css"
+				],
+				"refer": [
+					"view/pay/paycardsuccess.html",
+					"view/pay/rechargePay.html"
+				],
+				"priority": 0
+			},
+			"view/pay/rechargePay.html": {
+				"resources": [],
+				"refer": [
+					"view/pay/paycardsuccess.html"
+				],
+				"priority": 0
+			},
+			"view/user/personalInfo.html": {
+				"resources": [],
+				"refer": [
+					"view/user/headimg.html"
+				],
+				"priority": 0
+			},
+			"view/msg/msg_card.html": {
+				"resources": [
+					"view/msg/msg_card_sub.html"
+				],
+				"refer": [
+					"view/msg/msgCardDetails.html"
+				],
+				"priority": 0
+			},
+			"view/ad/screenAD.html": {
+				"resources": [
+					"res/fonts/mui.ttf",
+					"view/ad/screenAD.js",
+					"res/css/base.css",
+					"res/js/vue/vue.dev.js"
+				],
+				"refer": [
+					"view/broswer/web.html"
+				],
+				"priority": 0
+			},
+			"view/pay/paycardsuccess.html": {
+				"resources": [],
+				"refer": [
+					"view/user/card/memcardDetail.html"
+				],
+				"priority": 0
+			},
+			"view/merchant/merchants_sub.html": {
+				"resources": [],
+				"refer": [
+					"view/merchant/merchantCard.html",
+					"view/user/login.html"
+				],
+				"priority": 0
+			},
+			"view/user/compinfo.html": {
+				"resources": [],
+				"refer": [
+					"view/user/headimg.html"
+				],
+				"priority": 0
+			},
+			"view/msg/msg_card_sub.html": {
+				"resources": [],
+				"refer": [
+					"view/msg/msgCardDetails.html"
+				],
+				"priority": 0
+			},
+			"view/map/map_sub.html": {
+				"resources": [
+					"res/img/map/qrcode.png",
+					"res/img/map/location.png",
+					"res/css/icons-extra.css",
+					"view/map/map_sub.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"view/map/map_center.html": {
+				"resources": [
+					"res/js/lib/jquery/jquery-1.11.2.min.js",
+					"res/img/map/ding@3x.png"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"res/app/main.js",
+				"res/img/map/ymapmarker-ios.png",
+				"view/map/map.js",
+				"res/css/mui.css",
+				"view/merchant/merchants.js",
+				"res/img/map/jmapmarker-ios.png",
+				"view/msg/msg_card.js",
+				"res/img/map/ymapmarker.png",
+				"res/img/map/dingzi.png",
+				"view/msg/mymsg.js",
+				"res/fonts/mui-icons-extra.ttf",
+				"res/img/map/Rectangle 3.png",
+				"res/js/mui.js",
+				"res/js/vue/vue.dev.js",
+				"view/user/login.js",
+				"view/msg/msg_activity.js",
+				"view/msg/msg_sys.js",
+				"res/js/mui.view.js",
+				"res/img/map/jmapmarker.png",
+				"index.html",
+				"res/img/map/Rectangle 7.png",
+				"view/scan/qrscan.js",
+				"view/main.js",
+				"res/fonts/iconfont.woff"
+			]
+		}
+	},
+  "unpackage": [
+    "res/fonts/iconfont.woff",
+    "res/fonts/mui-icons-extra.ttf",
+    "res/img/map/jmapmarker-ios.png",
+    "res/img/map/jmapmarker.png",
+    "res/img/map/ymapmarker-ios.png"
+  ]
+}

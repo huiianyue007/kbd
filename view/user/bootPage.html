@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多引导页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<style type="text/css">
+			.mui-slider {
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+				width: 100%;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img{
+				height: 100vh;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<div class="mui-content">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../res/img/common/four.png">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../res/img/common/one.png">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../res/img/common/two.png">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../res/img/common/three.png">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item" id="four">
+							<a href="#">
+								<img src="../../res/img/common/four.png">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../res/img/common/one.png">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+//			var maxHeight = screen.height - 20;
+			document.getElementById("slider").style.height = 100 + "vh";
+			mui.plusReady(function() {
+				document.getElementById("four").addEventListener("touchmove", function() {
+					localStorage.setItem("bootPage", "已经触发");
+					plus.webview.currentWebview().close();
+				});
+				mui.back = function() {
+
+				}
+			});
+		</script>
+	</body>
+
+</html>

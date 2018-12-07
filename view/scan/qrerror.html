@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>扫码错误</title>
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<!--<link rel="stylesheet" href="../../res/css/common.css" type="text/css" charset="utf-8"/>-->
+		<style type="text/css">
+			#bcid {
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+			}
+			
+			.tip {
+				font-family: PingFang-SC-Medium;
+				font-size: 18px;
+				color: #4B4949;
+				letter-spacing: 0;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: #ffffff;">
+		<header class="mui-bar mui-bar-nav" style="z-index: 2;">
+			<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			<h1 class="mui-title">扫码错误</h1>
+		</header>
+		<div id="bcid">
+			<div style="height:50%;text-align: center;">
+				<img src="../../res/img/common/jinggao.png" style="width: 160px;margin-top: 25%;"/>
+			</div>
+			<p class="tip" style="text-align: center;">对不起，当前二维码无法识别</p>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+	<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+	<script type="text/javascript" src="../../res/app/app.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function(){
+			if(plus.webview.getWebviewById("qrscan")){
+				plus.webview.getWebviewById("qrscan").hide();
+				plus.webview.getWebviewById("qrscan").close();
+			}
+		});
+	</script>
+</html>

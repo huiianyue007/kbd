@@ -1,0 +1,378 @@
+.mui-card{
+	margin: 0;
+}
+
+.shop-merchantCard .memCard {
+	height: 4rem;
+	box-shadow: none;
+}
+
+.shop-merchantCard .memCard .card-content {
+	height: 3.6rem;
+	width: 6rem;
+	margin-left: 0.18rem;
+	color: #fff;
+}
+
+.shop-merchantCard .memCard .card-content .card-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.shop-merchantCard .memCard .card-content .shareTag {
+	width: 2rem;
+	height: 0.18rem;
+	z-index: 100;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0.27rem;
+	top: 0.25rem;
+}
+.shop-merchantCard .memCard .card-content .value-info {
+	height: 0.75rem;
+	width: 100%;
+	position: absolute;
+	top: 1.9rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span img {
+	height: 0.55rem;
+	width: 0.55rem;
+	margin-left: 0.22rem;
+	margin-top: 0.09rem;
+	border-radius: 50%;
+	
+}
+
+.shop-merchantCard .memCard .card-content .value-info span:nth-child(2) {
+	margin-top: 0.3rem;
+	float: right;
+	margin-right: 0.2rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i {
+	font-style: normal;
+	position: absolute;
+	width: 3rem;
+	top: 0.1rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.24rem;
+	color: #FFFFFF;
+	letter-spacing: 0.04rem;
+	padding-left: 0.2rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i img {
+	height: 0.26rem;
+	width: 0.26rem;
+	border-radius: 50%;
+	position: absolute;
+	top: 0.18rem;
+	left: -0.02rem;
+}
+
+.shop-merchantCard .memCard .card-content .value-info span i em {
+	font-size: 0.16rem;
+	font-style: normal;
+	position: absolute;
+	top: 0.33rem;
+	left: 0.5rem;
+	letter-spacing: 0.02rem;
+}
+.memCard .cardNum {
+	padding-top: 0.04rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.22rem;
+	color: #4B87E0;
+	letter-spacing: 0.02rem;
+	float: right;
+	margin-right: 0.4rem;
+}
+.rubCardPay .payMoney{
+	margin-left: 0.18rem;
+	margin-right: 0.18rem;
+	border-bottom: 1px solid #EAE8E8;
+}
+.rubCardPay .payMoney span {
+	display: inline-block;
+	height: 1rem;
+	padding-left: 0.18rem;
+	padding-top: 0.45rem;
+	text-align: center;
+	font-family: ArialMT;
+	font-size: 0.36rem;
+	color: #433D3D;
+}
+.rubCardPay .payMoney input {
+	display: block;
+	text-align: left;
+	font-family: ArialMT;
+	width: 5.35rem;
+	height: 0.7rem;
+	font-size: 0.46rem;
+	color: #433D3D;
+	letter-spacing: 0.02rem;
+	border: 0;
+	float: right;
+	margin-top: 0.25rem;
+	padding: 0;
+	line-height: 0.5rem;
+}
+input::-webkit-input-placeholder {
+	/*WebKit browsers*/
+	font-family: ArialMT;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+	line-height: 0.55rem;
+}
+input::-moz-input-placeholder {
+	/*Mozilla Firefox*/
+	font-family: ArialMT;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+	line-height: 0.55rem;
+}
+input::-ms-input-placeholder {
+	/*Internet Explorer*/
+	font-family: ArialMT;
+	font-size: 0.25rem;
+	color: #AFADAD;
+	letter-spacing: 0.05rem;
+	line-height: 0.55rem;
+}
+.rubCardPay .payInfo {
+	margin-top: 0.18rem;
+	width: 6rem;
+	margin-left: 0.18rem;
+	border-bottom: 1px solid #EAE8E8;
+}
+
+.rubCardPay .payInfo span {
+	margin-top:0.24rem;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.25rem;
+	color: #433D3D;
+	letter-spacing: 0.02rem;
+}
+.rubCardPay .payInfo p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.rubCardPay .payInfo i,
+.rubCardPay .payInfo em {
+	font-style: normal;
+}
+
+.rubCardPay .payInfo p {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.21rem;
+	color: #433D3D;
+	letter-spacing: 0;
+	padding-left: 0.18rem;
+	padding-top: 0.1rem;
+}
+
+.rubCardPay .payInfo p i {
+	font-family: PingFang-SC-Medium;
+	font-size:0.21rem;
+	color: #221F1F;
+	letter-spacing: 0;
+	padding-right:0.18rem;
+	float: right;
+}
+
+.rubCardPay .payInfo p em {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.21rem;
+	color: #676161;
+	letter-spacing: 0;
+	padding-right: 0.18rem;
+	float: right;
+}
+
+.rubCardPay .payInfo p:nth-child(2) {
+	color: #676161;
+}
+
+.rubCardPay .payInfo p:nth-child(4) {
+	color: #676161;
+	padding-bottom: 0.24rem;
+}
+.payType{
+	margin-top: 0.18rem;
+	margin-bottom: 0.3rem;
+}
+.rubCardPay .payType span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.26rem;
+	color: #433D3D;
+	letter-spacing: 0.02rem;
+}
+
+.rubCardPay .payType ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.rubCardPay .payType ul li {
+	list-style: none;
+}
+
+.rubCardPay .payType ul li img {
+	width: 0.8rem;
+	height: 0.8rem;
+	float: left;
+	margin-left: 0.2rem;
+}
+
+.rubCardPay .payType ul li span {
+	text-align: left;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.3rem;
+	color: #949494;
+	letter-spacing: 0;
+	padding: 0;
+	padding-top: 0.2rem;
+	padding-bottom: 0.3rem;
+	padding-left: 1.3rem;
+}
+
+.rubCardPay .payType ul li span img {
+	float: right;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top: -0.08rem;
+	margin-right: 0.26rem;
+}
+
+.payButton{
+	position: absolute;
+	bottom: 0.3rem;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.payButton button:nth-child(1){
+	background: #FFFFFF;
+	border-radius: 0.12rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 2.48rem;
+	height: 0.84rem;
+	margin-left: 0.24rem;
+	border: 1px solid #CCCCCC;
+}
+.payButton button:nth-child(2){
+	background: #FFD006;
+	border-radius: 0.12rem;
+	font-family: PingFang-SC-Medium;
+	font-size: 0.3rem;
+	color: #4B4949;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	width: 2.48rem;
+	height: 0.84rem;
+	float: right;
+	margin-right: 0.24rem;
+}
+.tanceng {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: #000;
+	filter: alpha(opacity=15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	display: "";
+}
+.remindTrue {
+	background-color: #FFFFFF;
+	border-radius: 0.12rem;
+	width: 4.7rem;
+	height: 2.32rem;
+	color: #666;
+	z-index: 200000;
+	position: absolute;
+	margin: 0 auto;
+	left: 0.81rem;
+	top: 4.26rem;
+}
+
+.remindTrue dt {
+	height: 1.5rem;
+	color: #252525;
+	display: block;
+	line-height: 23px;
+	padding-top: 0.43rem;
+	font-size: 0.22rem;
+}
+
+.remindTrue dt p {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #252525;
+	letter-spacing: 0.06rem;
+	text-align: center;
+}
+
+.remindTrue dt p i {
+	clear: both;
+	display: block;
+	font-family: PingFang-SC-Regular;
+	font-size: 20px;
+	color: #252525;
+	letter-spacing: 0;
+	text-align: center;
+	margin-top: 20px;
+	font-style: normal;
+}
+
+.remindTrue dd {
+	height: 0.82rem;
+}
+
+.cancel {
+	font-size: 0.25rem;
+	color: #4B4949;
+	width: 2.35rem;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background: #F6F4F4;
+	position: absolute;
+	left: 0px;
+	text-align: center;
+	border-bottom-left-radius: 0.12rem;
+}
+
+.cashSuccess {
+	font-size: 0.25rem;
+	color: #252525;
+	display: block;
+	float: right;
+	width: 2.35rem;
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background: #FFD006;
+	border-bottom-right-radius: 8px;
+	text-align: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多个人信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<link rel="stylesheet" href="../../res/css/base.css" />
+		<link rel="stylesheet" href="../../res/css/user/personalInfo.css" />
+		<link rel="stylesheet" href="../../res/css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../res/css/mui.poppicker.css" />
+		
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+				{{title}}
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				<a class="mui-icon mui-pull-right wordLink" id="saveNickName" v-show="saveType=='1'">保存</a>
+			</header>
+			<div class="mui-content user-login" style="display: none;" id="user">
+				<ul class="mui-table-view" v-show="saveType=='0'">
+					<li class="mui-table-view-cell" id="user_head">
+						<a class="mui-navigate-right">头像
+							<span class="mui-pull-right rightContent" style="padding: 0px;">
+								<img :src="user.headImgUrlPress"/>
+							</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="updateNickName">
+						<a class="mui-navigate-right">昵称
+							<span class="mui-pull-right rightContent">
+								{{user.nickName}}
+							</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="choiceSex">
+						<a class="mui-navigate-right">性别
+							<span class="mui-pull-right rightContent">
+								{{user.sex}}
+							</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="choiceAge">
+						<a class="mui-navigate-right">年龄
+							<span class="mui-pull-right rightContent">
+								{{user.age}}
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div id="inputRow" class="mui-input-row" v-show="saveType=='1'" >
+					<input id="nickname" type="text" class="mui-input" placeholder="请输入昵称">
+					<span>请输入10个字符以内</span>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../res/js/immersed.js" ></script>	
+		<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="../../res/js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="personalInfo.js"></script>
+	</body>
+
+</html>

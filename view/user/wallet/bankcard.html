@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>卡不多的银行卡</title>
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/wallet/bankcard.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header">
+					银行卡
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content" style="display: none;" id="muiContent">
+				<dl class="bankmessage">
+					<dd><span>{{bankcard.bankName}}</span><i>{{bankcard.bankNum|changeVal}}</i></dd>
+				</dl>
+				<p class="drawalse" id="changeBank">
+					<a href="#">更换银行卡</a>
+				</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="bankcard.js"></script>
+	</body>
+
+</html>

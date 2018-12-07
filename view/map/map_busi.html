@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<style>
+			body,
+			.mui-content {
+				background-color: transparent;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mui-content map-merchantCard">
+				<div class="mui-content-padded">
+					<div class="mui-slider">
+						<div class="mui-slider-group">
+							<div v-for="data in merchantCards" class="mui-slider-item merchantCard" v-tap="[openWindow,data.id]">
+								<div class="mui-card-content card-content">
+									<span class="merchname" v-text="data.shopName"></span>
+									<span class="distance">距离{{data.distance}}米|预计{{data.time}}分钟</span>
+									<div class="head">
+										<img :src="data.headImgUrlPress" />
+									</div>
+									<span class="useperson" v-cloak>
+									{{data.shopSharePeopleCount}}
+									<i>人在使用共享卡</i>
+								</span>
+									<div class="value-info">
+										点击使用
+										<span>{{data.shopMinRate|intVal}}<i>.{{data.shopMinRate|floatVal}}<em>折起</em></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+	<script type="text/javascript" src="../../res/app/app.js"></script>
+	<script type="text/javascript" src="map_busi.js"></script>
+
+</html>

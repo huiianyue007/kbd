@@ -1,0 +1,93 @@
+.shopDetail {
+	width: 100%;
+	height: 5rem;
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+.shopDetail p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.shopDetail i,
+.shopDetail em {
+	font-style: normal;
+}
+
+.shopDetail .shopTitle {
+	height: 1.72rem;
+}
+
+.shopDetail .shopTitle img {
+	height: 0.98rem;
+	width: 0.98rem;
+	border-radius: 50%;
+	margin-top: 0.45rem;
+	margin-left: 0.28rem;
+}
+
+.shopDetail .shopTitle i {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+	position: absolute;
+	top: 1.38rem;
+	left: 1.53rem;
+	width: 3rem;
+}
+
+.shopDetail .shopTitle em {
+	opacity: 0.65;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+}
+
+.shopDetail .shopPhone {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+	padding-left: 0.28rem;
+}
+
+.shopDetail .shopPhone em {
+	position: absolute;
+	left: 1rem;
+}
+
+.shopDetail .shopAddr {
+	margin-top: 0.27rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.22rem;
+	color: #4B4949;
+	letter-spacing: 0.02rem;
+	padding-left: 0.28rem;
+	width: 4rem;
+}
+
+.shopDetail .shopAddr em {
+	position: absolute;
+	left: 1rem;
+	width: 3.27rem;
+}
+
+.shopDetail .callPhone {
+	position: absolute;
+	display: inline-block;
+	width: 1.67rem;
+	height: 1.6rem;
+	right: 0px;
+	top: 2.42rem;
+	border-left: 0.01rem solid #e3dede;
+	text-align: center;
+}
+
+.shopDetail .callPhone img {
+	height: 0.8rem;
+	width: 0.8rem;
+	margin-top: 0.3rem;
+}

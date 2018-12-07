@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>卡不多的蹭卡记录</title>
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			
+			span {
+				float: right;
+			}
+			
+			.topContent li {
+				background-color: #FDD804;
+				height: 86px;
+				line-height: 70px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			
+			.topContent li span {
+				font-size: 44px;
+				color: #FFFFFF;
+			}
+			
+			.details li {
+				font-size: 13px;
+				color: #252525;
+				letter-spacing: 1.31px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					{{title}}
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content" id="muiContent" style="display: none;">
+				<ul class="mui-table-view topContent">
+					<li class="mui-table-view-cell" v-show="status=='0'||status=='2'||status=='3'" v-cloak>{{consumptionName}}
+						<span v-cloak v-if="consumptionName=='卡余额减少'">{{incomeDetails.cardAmountOut|floatVal}}</span>
+						<span v-cloak v-else-if="consumptionName=='消费'">{{incomeDetails.actualPrice|floatVal}}</span>
+						<span v-cloak v-else-if="consumptionName=='收入'">{{incomeDetails.walletAmountIn|floatVal}}</span>
+						<span v-cloak v-else>{{incomeDetails.actualPrice|floatVal}}</span>
+					</li>
+					<li class="mui-table-view-cell" v-show="consumptionName=='充值'" v-cloak>{{consumptionName}}<span v-cloak>+{{incomeDetails.actualPrice|floatVal}}</span></li>
+					<li class="mui-table-view-cell" v-show="consumptionName=='支出'" v-cloak>{{consumptionName}}<span v-cloak>-{{incomeDetails.actualPrice|floatVal}}</span></li>
+				</ul>
+				<ul class="mui-table-view details" v-show="status=='0'||consumptionName=='支出'">
+					<li class="mui-table-view-cell">交易单号<span v-cloak>{{incomeDetails.orderNum}}</span></li>
+					<li class="mui-table-view-cell">交易时间<span v-cloak>{{incomeDetails.createTime}}</span></li>
+					<li class="mui-table-view-cell">消费金额<span v-cloak>{{incomeDetails.originalPrice}}</span></li>
+					<li class="mui-table-view-cell">共享折扣<span v-cloak>{{incomeDetails.shareRate|showRate(incomeDetails.cardRate)}}折</span></li>
+					<li class="mui-table-view-cell">卡主昵称<span v-cloak>{{incomeDetails.cardmaster}}</span></li>
+					<li class="mui-table-view-cell">蹭卡用户<span v-cloak>{{incomeDetails.consumer}}</span></li>
+					<li class="mui-table-view-cell">支付渠道<span v-cloak>{{payName}}</span></li>
+					<li class="mui-table-view-cell">商家名称<span v-cloak>{{incomeDetails.shopName}}</span></li>
+					<li class="mui-table-view-cell">储值卡名称<span v-cloak>{{incomeDetails.cardName}}</span></li>
+				</ul>
+				<ul class="mui-table-view details" v-show="consumptionName=='充值'">
+					<li class="mui-table-view-cell">交易单号<span v-cloak>{{incomeDetails.orderNum}}</span></li>
+					<li class="mui-table-view-cell">交易时间<span v-cloak>{{incomeDetails.createTime}}</span></li>
+					<li class="mui-table-view-cell">储值卡折扣<span v-cloak>{{incomeDetails.cardRate}}折</span></li>
+					<li class="mui-table-view-cell">会员账号<span v-cloak>{{incomeDetails.consumer}}</span></li>
+					<li class="mui-table-view-cell">支付渠道<span v-cloak>{{payName}}</span></li>
+					<li class="mui-table-view-cell">商家名称<span v-cloak>{{incomeDetails.shopName}}</span></li>
+					<li class="mui-table-view-cell">储值卡名称<span v-cloak>{{incomeDetails.cardName}}</span></li>
+				</ul>
+				<ul class="mui-table-view details" v-show="status=='2'">
+					<li class="mui-table-view-cell">交易单号<span v-cloak>{{incomeDetails.orderNum}}</span></li>
+					<li class="mui-table-view-cell">交易时间<span v-cloak>{{incomeDetails.createTime}}</span></li>
+					<li class="mui-table-view-cell">消费金额<span v-cloak>{{incomeDetails.originalPrice}}</span></li>
+					<li class="mui-table-view-cell">储值卡折扣<span v-cloak>{{incomeDetails.cardRate}}折</span></li>
+					<li class="mui-table-view-cell">卡主账号<span v-cloak>{{incomeDetails.consumer}}</span></li>
+					<li class="mui-table-view-cell">储值卡余额<span v-cloak>{{incomeDetails.cardAmountRemain}}</span></li>
+					<li class="mui-table-view-cell">支付渠道<span v-cloak>{{payName}}</span></li>
+					<li class="mui-table-view-cell">商家名称<span v-cloak>{{incomeDetails.shopName}}</span></li>
+					<li class="mui-table-view-cell">储值卡名称<span v-cloak>{{incomeDetails.cardName}}</span></li>
+				</ul>
+				<ul class="mui-table-view details" v-show="status=='3'">
+					<li class="mui-table-view-cell">交易单号<span v-cloak>{{incomeDetails.orderNum}}</span></li>
+					<li class="mui-table-view-cell">交易时间<span v-cloak>{{incomeDetails.createTime}}</span></li>
+					<li class="mui-table-view-cell">消费金额<span v-cloak>{{incomeDetails.originalPrice}}</span></li>
+					<li class="mui-table-view-cell" v-if="consumptionName=='卡余额减少'">共享折扣<span v-cloak >{{incomeDetails.shareRate}}折</span></li>
+					<li class="mui-table-view-cell" v-else>共享折扣<span v-cloak >{{incomeDetails.cardRate}}折</span></li>
+					<li class="mui-table-view-cell">会员账号<span v-cloak>{{incomeDetails.consumer}}</span></li>
+					<li class="mui-table-view-cell">储值卡余额<span v-cloak>{{incomeDetails.cardAmountRemain }}</span></li>
+					<li class="mui-table-view-cell">支付渠道
+						<span v-cloak v-if="consumptionName=='卡余额减少'">储值卡支付</span>
+						<span v-cloak v-else>{{payName}}</span>
+					</li>
+					<li class="mui-table-view-cell">商家名称<span v-cloak>{{incomeDetails.shopName}}</span></li>
+					<li class="mui-table-view-cell">储值卡名称<span v-cloak>{{incomeDetails.cardName}}</span></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="incomeDetails.js"></script>
+	</body>
+
+</html>

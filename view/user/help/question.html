@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多意见反馈</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/help/question.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<link rel="stylesheet" href="../../../res/css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../../res/css/mui.poppicker.css" />
+
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					{{title}}
+					</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content proposal">
+				<div class="proposal_content">
+					<div class="title">请选择反馈类型（必选啦）</div>
+					<div class="queationType">
+						<p typeid="bug" desc="BUG：程序报错或者异常"><img id="bug" src="../../../res/img/common/questionchecked.png" /><span>BUG：程序报错或者异常</span></p>
+						<p typeid="tigao" desc="产品改进：我觉得一些点可以做更好"><img id="tigao" src="../../../res/img/common/question.png" /><span>产品改进：我觉得一些点可以做更好</span></p>
+					</div>
+				</div>
+				<div class="question_content">
+					<div class="title">详细描述（必选啦)</div>
+					<div class="textarea_content">
+						<div class="input_title">问题描述</div>
+						<textarea id="desc" name="" maxlength="200" rows="8" cols=""></textarea>
+						<div class="input_tip">
+							限输入{{ contentLength }}/200个字
+						</div>
+					</div>
+				</div>
+				<div class="question_img">
+					<div class="title">添加图片（请提供相关截图，更快改正哈）</div>
+					<div class="pic_content">
+						<ul>
+							<li><img imgSrc="picOne" imgSrcPress="picOnePress" class="addImg" id="one" :src="question.picOnePress" /><img id="delone" class="del" src="../../../res/img/common/delImg.png" style="display: none;"/></li>
+							<li><img imgSrc="picTwo" imgSrcPress="picTwoPress" class="addImg" id="two" :src="question.picTwoPress" style="display: none;" /><img id="deltwo" class="del" src="../../../res/img/common/delImg.png" style="display: none;" /></li>
+							<li><img imgSrc="picThree" imgSrcPress="picThreePress" class="addImg" id="three" :src="question.picThreePress" style="display: none;" /><img id="delthree" class="del" src="../../../res/img/common/delImg.png" style="display: none;" /></li>
+							<li><img imgSrc="picFour" imgSrcPress="picFourPress" class="addImg" id="four" :src="question.picFourPress" style="display: none;" /><img id="delfour" class="del" src="../../../res/img/common/delImg.png" style="display: none;" /></li>
+						</ul>
+					</div>
+				</div>
+				<div class="question_btn" id="question_btn">
+					<button id='saveQuestion' class="mui-btn mui-btn-block">提交</button>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.poppicker.js"></script>
+		<script type="text/javascript" src="question.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,83 @@
+body,.mui-content{
+	background-color: #FDFAFA;
+}
+.activity {
+  width: 100%;
+}
+
+.activity .activity_card {
+margin-top: 0.2rem;
+  width: 6rem;
+  height: 3.4rem;
+  margin-left: 0.2rem;
+  border-radius: 0.12rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0.04rem 0 rgba(239,239,239,0.83);
+}
+
+.activity .activity_card dl,
+.activity .activity_card dt,
+.activity .activity_card dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+.activity .activity_card img {
+  width: 100%;
+  height: 2.6rem;
+  border-top-right-radius:0.12rem;
+  border-top-left-radius: 0.12rem;
+}
+
+.activity .activity_card span {
+  display: inline-block;
+  width: 2rem;
+  background-color: #FFD006;
+  text-align: center;
+  font-family: PingFang-SC-Regular;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin-left: 0.18rem;
+  border-radius: 0.06rem;
+  margin-top: 0.13rem;
+}
+
+.activity .activity_card em {
+  display: block;
+  width: 0.95rem;
+  border-radius: 0.06rem;
+  background-color: #FF7777;
+  text-align: center;
+  font-family: PingFang-SC-Regular;
+  font-size: 0.22rem;
+  color: #FFFFFF;
+  float: right;
+  font-style: normal;
+  margin-right: 0.18rem;
+  margin-top: 0.13rem;
+}
+
+.activity .activity_card i {
+  display: block;
+ width: 0.95rem;
+  border-radius: 0.06rem;
+  background-color: #6a6a6a;
+  text-align: center;
+  font-family: PingFang-SC-Regular;
+  font-size: 0.22rem;
+  color: #FFFFFF;
+  float: right;
+  font-style: normal;
+  margin-right: 0.18rem;
+  margin-top: 0.13rem;
+}
+.noRead{
+	display: inline-block;
+	background-color: #FD5A04;
+	height: 0.22rem;
+	width: 0.22rem;
+	border-radius: 50%;
+	margin-top: -0.12rem;
+	position: absolute;
+	right: 0.14rem;
+}

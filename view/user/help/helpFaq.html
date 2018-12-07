@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多帮助与反馈</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<style type="text/css">
+			body{
+				background-color: #FCF9F9;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- top -->
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header">
+					帮助与反馈
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<!-- 菜单容器 -->
+		  	<!--header end-->
+		    <div class="mui-content helpFaq">		
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell" id="commonProblem">
+						<a class="mui-navigate-right">
+							常见问题
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="question">
+						<a class="mui-navigate-right">
+							意见反馈
+						</a>
+					</li>
+					<li class="mui-table-view-cell" id="contact">
+						<a class="mui-navigate-right">
+							联系客服<i>工作日10:00-17:00</i>
+						</a>
+					</li>
+				</ul>
+				<div id="tanceng" class="tanceng" style="display: none;"></div>
+				<dl id="remindTrue" class="remindTrue" style="display: none;">
+					<dt>
+						<p>联系客服<br/>
+						<i>{{serverPhone}}</i>
+						</p>
+					</dt>
+					<dd>
+						<span id="cancel" class="cancel">取消</span>
+						<span id="telPhone" class="telPhone">确认</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js" ></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="helpFaq.js" ></script>
+	</body>
+</html>

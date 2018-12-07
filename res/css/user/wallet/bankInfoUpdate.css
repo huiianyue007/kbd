@@ -1,0 +1,102 @@
+.mui-content {
+	background-color: #fdfafa;
+}
+
+.mui-input-group {
+	margin-top: 0.2rem;
+}
+
+.mui-input-group .mui-input-row {
+	height: 0.9rem;
+}
+
+.mui-input-row label {
+	width: 0.98rem;
+	padding: 0.33rem 0rem;
+	font-size: 0.26rem;
+	text-align: center;
+}
+
+.mui-input-group:before {
+	height: 0px;
+}
+
+.mui-input-group:after {
+	height: 0px;
+}
+
+.mui-input-group .mui-input-row:after {
+	opacity: 0.5;
+}
+
+.mui-input-group .mui-input-row:after {
+	height: 0px;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+	height: 0.9rem;
+	font-size: 0.26rem;
+}
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+	width: 5rem;
+}
+
+.mui-content-padded {
+	margin-top: 0.61rem;
+}
+.rightContent {
+	display: inline-block;
+	width: 5rem;
+	padding: 0.25rem 0rem;
+	padding-left: 0.35rem;
+	font-size: 0.26rem;
+}
+.mui-btn-block {
+	padding: 0;
+	height: 0.82rem;
+	width: 6rem;
+	background-color: #FFD006;
+	border-radius: 0.12rem;
+	box-shadow: 0 0.02rem 0.04rem 0 #F5D136;
+}
+.mui-table-view-cell{
+	font-size: 0.26rem;
+	color: #4B4949;
+}
+.img-success{
+	width: 100%;
+	text-align: center;
+	display: block;
+	padding-top: 1.5rem;
+}
+.img-success img{
+	height: 1.42rem;
+	width: 1.42rem;
+}
+.successSpan{
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+.successSpan span{
+	font-size: 0.25rem;
+	letter-spacing: 0.08rem;
+}

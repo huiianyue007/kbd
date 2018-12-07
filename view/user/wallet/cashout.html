@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>卡不多申请提现</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/wallet/cashout.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title" v-text="title">
+				</h1>
+				<a id="backBtn" class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content cashout-content">
+				<div v-show="remindType==3||remindType==1||remindType==2">
+					<div class="container">
+						<span class="title">提现金额</span>
+						<p class="amountCash">
+							<span>¥</span>
+							<input id="cashMoney" v-model="cash.cashMoney" type="number" placeholder="请输入提现金额" style="height: 0.8rem;"/>
+						</p>
+						<p class="cashInstro">
+							<span class="banlance">可提现余额¥<i>{{cash.balance|floatVal}}</i></span>
+							<span class="allCash" v-tap="[allCash,'']">全部提现</span>
+						</p>
+					</div>
+					<button class="cashBtn" v-tap="[cashoutBtn,'']">提现至银行卡</button>
+				</div>
+				<div class="verifyCode" v-show="remindType==4">
+					<p>请输入手机{{mobile}}收到的验证码</p>
+					<input id="verifyCodeIpt" v-model='cash.verifyCode' type="tel" class="mui-input" placeholder="请输入验证码"><button type="button" class="random-btn" id="randBtn">点击获取</button>
+					<p class="line"></p>
+					<button class="cashBtn" v-tap="[cashOutSuccess,'']">下一步</button>
+				</div>
+				<div class="cashOutSuccess" v-show="remindType==6">
+					<p>
+						<span class="tixianjine">{{cash.actualMoney}}</span>
+						<span class="tixianTitle">到账金额（元）</span>
+					</p>
+					<p class="successSpan">
+						<img src="../../../res/img/common/Rectangle 66.png" />
+						<span>预计到账时间：1-3个工作日，最快一分钟。</span>
+					</p>
+					<button class="cashBtn" v-tap="[finshSuccess,'']">完成</button>
+				</div>
+				<div id="cashpasswordDiv" style="display: none;">
+					<div class="inputs">
+						<span id="tishi">
+							请输入提现密码
+						</span>
+						<span>¥{{cash.actualMoney}}</span>
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+						<input type="password" name="password" id="" value="" maxlength="1" readonly="readonly" />
+					</div>
+					<div class="keywords">
+						<ul id="keywords" class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="1">
+								1
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="2">
+								2
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="3">
+								3
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="4">
+								4
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="5">
+								5
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="6">
+								6
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="7">
+								7
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="8">
+								8
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="9">
+								9
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="kong">
+
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="0">
+								0
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 " data="del">
+								<span class="mui-icon iconfont icon-tuige" style="font-size: 17px;"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tanceng" v-if="remindType=='1'||moneyPwdError=='1'"></div>
+				<div class="tanceng" v-if="remindType=='2'"></div>
+				<dl class="tckok" v-if="remindType=='1'||moneyPwdError=='1'">
+					<dt>{{remind}}</dt>
+					<dd v-tap="[displayRemind,'']">确认</dd>
+				</dl>
+				<dl class="remindTrue" v-if="remindType=='2'">
+					<dt>
+						<p>提现金额：{{cash.cashMoney}}元<br/>
+						实际到账：{{cash.actualMoney}}元<br/>
+						服务费用：{{cash.poundage}}元<br />
+						<i>服务费用包括平台的服务费用与第三方支<br/>付公司转账费用，共计抽取{{ cash.cashMoney >= 1000 ? '提现金额的1‰' : '1元' }}</i>
+						</p>
+					</dt>
+					<dd>
+						<span class="cancel" v-tap="[displayRemind,'']">取消</span>
+						<span class="cashSuccess" v-tap="[cashSuccess,'']">确认</span>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="cashout.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,109 @@
+.user-merchantCard .merchantCard {
+	width: 6rem;
+	height: 1.85rem;
+	background: #FFF;
+	border-radius: 0.25rem;
+	margin: 0.22rem;
+}
+.user-merchantCard .merchantCard .card-content {
+}
+
+.user-merchantCard .merchantCard .card-content .merchname {
+	font-family: PingFang-SC-Medium;
+	font-size: 0.28rem;
+	color: #424242;
+	letter-spacing: 0;
+	position: absolute;
+	padding-top: 0.15rem;
+	padding-left: 0.3rem;
+}
+
+.user-merchantCard .merchantCard .card-content .distance {
+	font-family: PingFang-SC-Regular;
+	font-size: 0.18rem;
+	color: #9FA2B3;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0.3rem;
+	top: 0.56rem;
+}
+
+.user-merchantCard .merchantCard .card-content .head {
+	position: absolute;
+	left: 0.3rem;
+	top: 1.08rem;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.user-merchantCard .merchantCard .card-content .head img {
+	width: 0.6rem;
+}
+
+.user-merchantCard .merchantCard .card-content .useperson {
+	position: absolute;
+	left: 1.02rem;
+	top: 1.18rem;
+	font-family: ArialMT;
+	font-size: 0.5rem;
+	color: #424242;
+	letter-spacing: 0.04rem;
+}
+
+.user-merchantCard .merchantCard .card-content .useperson i {
+	font-family: PingFangSC-Regular;
+	font-style: normal;
+	font-size: 0.2rem;
+	color: #9FA2B3;
+	letter-spacing: 0;
+	margin-left: -0.23rem;
+}
+
+.user-merchantCard .merchantCard .card-content .value-info {
+	height: 1.85rem;
+	width: 1.33rem;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding-top: 0.39rem;
+	background: #FDD804;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.25rem;
+	color: #FFF;
+	letter-spacing: 0;
+	text-align: center;
+}
+
+.user-merchantCard .merchantCard .card-content .value-info span {
+	font-family: ArialMT;
+	font-size: 0.58rem;
+	color: #FFF;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0;
+	top: 1rem;
+	padding-left: 0.1rem;
+}
+
+.user-merchantCard .merchantCard .card-content .value-info span i {
+	color: #FFF;
+	font-family: PingFangSC-Regular;
+	font-style: normal;
+	font-size: 0.27rem;
+	letter-spacing: 0;
+}
+
+.user-merchantCard .merchantCard .card-content .value-info span i em {
+	font-style: normal;
+	font-size: 0.21rem;
+}
+
+.user-merchantCard .mui-table-view:before {
+	background-color: #fff;
+}
+
+.user-merchantCard .mui-table-view:after {
+	background-color: #fff;
+}

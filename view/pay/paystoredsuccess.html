@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../res/css/app.css" />
+		<link rel="stylesheet" href="../../res/css/style.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			
+			span {
+				float: right;
+			}
+			
+			ul,
+			li {
+				padding: 0px;
+			}
+			
+			dl,
+			dt,
+			dd {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.topContent {
+				height: 60px;
+				color: #FFFFFF;
+				font-family: PingFang-SC-Medium;
+				font-size: 18px;
+				color: #4B4949;
+				letter-spacing: 0;
+				text-align: center;
+				display:flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+			}
+			
+			.topContent dt img {
+				height: 50px;
+			}
+			
+			.topContent dd {}
+			
+			.mui-table-view-cell:after {
+				height: 0px;
+			}
+			
+			.mui-card {
+				border-radius: 8px;
+			}
+			
+			.payImg {
+				width: 100%;
+				height: 180px;
+				position: absolute;
+				bottom: 0;
+			}
+			
+			.payImg img {
+				width: 100%;
+				height: 160px;
+				position: absolute;
+				bottom: 0;
+			}
+			
+			.scroll_div {
+				overflow-y: auto;
+				overflow-x: hidden;
+				width: 100%;
+			}
+			.mui-table-view:after{
+				height: 0px;
+			}
+			.mui-table-view:before{
+				height: 0px;
+			}
+			.success{
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 36px;
+      }
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header">
+					支付成功
+				</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+				<a id="finishBtn" class="mui-action-back mui-btn-link mui-pull-right" style="color: #000000;">完成</a>
+			</header>
+			<div class="mui-content">
+				<div id="scroll_div" class="scroll_div">
+				  <div class="success">
+				    ￥{{orderDetails.actualPrice}}
+				  </div>
+					<dl class="topContent">
+						<dt><img src="../../res/img/common/success.png" /></dt>
+						<dd>支付成功</dd>
+					</dl>
+					<ul class="mui-table-view details">
+						<li class="mui-table-view-cell">商家名称<span v-cloak>{{orderDetails.shopName}}</span></li>
+						<li class="mui-table-view-cell">消费金额<span v-cloak>{{orderDetails.originalPrice }}</span></li>
+						<li class="mui-table-view-cell">尊享折扣<span v-cloak>{{orderDetails.shareRate }}</span></li>
+						<li class="mui-table-view-cell">优惠金额<span v-cloak>{{orderDetails.originalPrice|calaVal(orderDetails.actualPrice)}}</span></li>
+						<li class="mui-table-view-cell">消费时间<span v-cloak>{{orderDetails.createTime}}</span></li>
+					</ul>
+				</div>
+				<div id="payImg" class="payImg">
+					<img src="../../res/img/common/rubcardPay.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		/**
+		 * 计算滚动条的高度
+		 */
+		document.getElementById("scroll_div").style.height = (screen.height - 220) + "px";
+	</script>
+	<script type="text/javascript" src="../../res/js/immersed.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue.dev.js"></script>
+	<script type="text/javascript" src="../../res/js/vue/vue-tap.js"></script>
+	<script type="text/javascript" src="../../res/js/mui.min.js"></script>
+	<script type="text/javascript" src="../../res/app/tools.js"></script>
+	<!-- 工具类 -->
+	<script type="text/javascript" src="../../res/app/app.js"></script>
+	<script type="text/javascript" src="paystoredsuccess.js"></script>
+
+</html>

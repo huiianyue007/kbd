@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>卡不多的提现记录（列表）</title>
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/app.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			
+			span {
+				float: right;
+			}
+			
+			.topContent li {
+				background-color: #FDD804;
+				height: 86px;
+				line-height: 70px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			
+			.topContent li span {
+				font-size: 44px;
+				color: #FFFFFF;
+			}
+			
+			.details li {
+				font-size: 13px;
+				color: #252525;
+				letter-spacing: 1.31px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">提现明细</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+			<div class="mui-content" id="withdrawcash" style="display: none;">
+				<ul class="mui-table-view topContent">
+					<li class="mui-table-view-cell">提现金额<span>{{withdrawcash.moneyAmount|floatVal}}</span></li>
+				</ul>
+				<ul class="mui-table-view details">
+					<li class="mui-table-view-cell">提现编号<span>{{withdrawcash.moneyNum}}</span></li>
+					<li class="mui-table-view-cell">提现状态<span v-if="withdrawcash.isMoney=='0'">审核中</span><span v-if="withdrawcash.isMoney=='1'">审核通过</span><span v-if="withdrawcash.isMoney=='2'">已付款</span></li>
+					<li class="mui-table-view-cell">申请时间<span>{{withdrawcash.createTime}}</span></li>
+					<li class="mui-table-view-cell">到帐银行卡<span>{{withdrawcash.bankName}}（尾号{{withdrawcash.bankNum}}）</span></li>
+					<li class="mui-table-view-cell">服务费用<span>{{withdrawcash.moneyAmount|calaVal(withdrawcash.moneyActualIn)}}</span></li>
+					<li class="mui-table-view-cell">实际到账<span>{{withdrawcash.moneyActualIn|floatVal}}</span></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<script type="text/javascript" src="../../../res/js/vue/vue-tap.js"></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="withdrawcashDetails.js"></script>
+	</body>
+
+</html>

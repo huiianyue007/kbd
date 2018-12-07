@@ -1,0 +1,48 @@
+.slipCardNotice .unread {
+  color: #4B4949;
+}
+
+.slipCardNotice .read {
+  color: #4B4949;
+  opacity: 0.7;
+}
+.mui-card{
+	position: initial;
+	border-radius: 0.12rem;
+}
+.slipCardNotice .unreadmarkup {
+  display: inline-block;
+	background-color: #FD5A04;
+	height: 0.22rem;
+	width: 0.22rem;
+	border-radius: 50%;
+	position: absolute;
+	right: 0.1rem;
+	margin-top: -0.1rem;
+}
+
+.slipCardNotice .title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.2rem;
+  color: #4B4949;
+  font-family: PingFang-SC-Regular;
+  letter-spacing: 0.02rem;
+}
+
+.slipCardNotice .content {
+  padding: 0.3rem 0.3rem;
+  font-size:0.22rem;
+  letter-spacing: 0.02rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.slipCardNotice .operation {
+  display: block;
+  text-align: center;
+  font-size: 0.24rem;
+  padding-bottom: 0.1rem;
+}

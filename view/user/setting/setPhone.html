@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>卡不多设置手机号</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../../res/css/mui.min.css" />
+		<link rel="stylesheet" href="../../../res/css/iconfont.css" />
+		<link rel="stylesheet" href="../../../res/css/base.css" />
+		<link rel="stylesheet" href="../../../res/css/user/setting/setPhone.css" />
+		<link rel="stylesheet" href="../../../res/css/style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title kbd-header" v-cloak>
+					{{title}}
+					</h1>
+				<a class="mui-action-back mui-icon iconfont icon-fanhui mui-pull-left"></a>
+			</header>
+
+			<div class="mui-content user-login">
+				<div class="beforePhone" v-show="setType==='before'">
+					<p>当前手机号</p>
+					<p>{{mobile}}</p>
+					<p>更换手机号码不会影响您的储值卡、钱包等账户信息，更改后，请用新的手机号码登录。</p>
+				</div>
+				<div v-show="setType==='verifyCode'" class="verifyCode">
+					<p>请输入手机{{mobile}}收到的验证码</p>
+					<input  type="tel" id="verifyCodeIpt" class="mui-input" placeholder="请输入验证码"><input type="button" class="random-btn" id="randBtn" value="点击获取"></input>
+				</div>
+				<div v-show="setType==='setPhone'" class="user-login">
+					<form id='login-form' class="mui-input-group">
+						<div class="mui-input-row">
+							<input v-validate="'phone'" v-model='newPhone.mobile' maxlength="11" type="tel" class="mui-input" placeholder="请输入手机号">
+						</div>
+						<div class="mui-input-row verifyCode">
+							<input v-model='newPhone.verifyCode' type="tel" class="mui-input" placeholder="请输入验证码"><input type="button" class="random-btn" id="randBtn2" value="点击获取"></input>
+						</div>
+					</form>
+				</div>
+				<div class="mui-content-padded">
+					<button id='setPhoneBtn' class="mui-btn mui-btn-block login-btn">{{btnTitle}}</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../../res/js/immersed.js" ></script>		
+		<script type="text/javascript" src="../../../res/js/vue/vue.dev.js"></script>
+		<!--
+        	描述：validate
+        -->
+		<script type="text/javascript" src="../../../res/js/vue/vee-validate.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/locale/zh_CN.js" ></script>
+		<script type="text/javascript" src="../../../res/js/vue/custVeeValidate.js" ></script>
+		<script type="text/javascript" src="../../../res/js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../res/app/tools.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="../../../res/app/app.js"></script>
+		<script type="text/javascript" src="setPhone.js"></script>
+	</body>
+
+</html>
