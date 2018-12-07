@@ -1,0 +1,175 @@
+{
+  "view/main.html": {
+    "resources": [
+      "view/map/map.html"
+    ],
+    "refer": [
+      "view/map/map.html",
+      "view/user/bootPage.html"
+    ]
+  },
+  "view/map/map.html": {
+    "resources": [
+      "view/map/map_header.html",
+      "view/map/map_center.html",
+      "view/map/map_busi.html",
+      "view/map/map_sub.html"
+    ],
+    "refer": [
+      "view/map/map_sub.html",
+      "view/ad/screenAD.html",
+      "view/map/map_busi.html",
+      "view/map/map_header.html",
+      "view/map/map_center.html",
+      "view/user/login.html",
+      "view/scan/qrscan.html"
+    ]
+  },
+  "view/map/map_header.html": {
+    "refer": [
+      "view/user/home.html",
+      "view/merchant/merchants.html"
+    ],
+    "resources": []
+  },
+  "view/user/home.html": {
+    "refer": [
+      "view/user/login.html",
+      "view/user/card/memcards.html",
+      "view/user/personalInfo.html",
+      "view/user/wallet/mywallet.html",
+      "view/user/setting/setup.html",
+      "view/user/wallet/income.html"
+    ],
+    "resources": []
+  },
+  "view/user/card/memcards.html": {
+    "refer": [
+      "view/user/card/memcardDetail.html"
+    ],
+    "resources": []
+  },
+  "view/user/card/memcardDetail.html": {
+    "refer": [
+      "view/user/card/consumptions.html",
+      "view/pay/rechargePay.html",
+      "view/user/card/discountSetting.html",
+      "view/pay/storedCardPay.html",
+      "view/user/login.html",
+      "view/scan/qrscan.html"
+    ],
+    "resources": []
+  },
+  "view/user/card/consumptions.html": {
+    "refer": [
+      "view/user/wallet/incomeDetails.html"
+    ],
+    "resources": []
+  },
+  "view/user/login.html": {
+    "refer": [
+      "view/user/register.html"
+    ]
+  },
+  "view/user/wallet/bankcard.html": {
+    "refer": [
+      "view/user/authentication.html"
+    ]
+  },
+  "view/user/wallet/mywallet.html": {
+    "refer": [
+      "view/user/wallet/bankcard.html",
+      "view/user/wallet/bankInfo.html"
+    ]
+  },
+  "view/user/register.html": {
+    "refer": [
+      "view/user/compinfo.html"
+    ]
+  },
+  "view/user/compinfo.html": {
+    "refer": [
+      "view/user/headimg.html"
+    ]
+  },
+  "view/user/wallet/bankInfo.html": {
+    "refer": [
+      "view/user/wallet/cashpassword.html"
+    ]
+  },
+  "view/user/authentication.html": {
+    "refer": [
+      "view/user/wallet/bankInfoUpdate.html"
+    ]
+  },
+  "view/user/wallet/income.html": {
+    "refer": [
+      "view/user/wallet/incomeDetails.html"
+    ]
+  },
+  "view/merchant/merchants.html": {
+    "resources": [
+      "view/merchant/merchants_sub.html"
+    ],
+    "refer": [
+      "view/merchant/merchants_sub.html"
+    ]
+  },
+  "view/merchant/merchants_sub.html": {
+    "refer": [
+      "view/merchant/merchantCard.html",
+      "view/user/login.html"
+    ]
+  },
+  "view/merchant/merchantCard.html": {
+    "refer": [
+      "view/merchant/cardSellingDetails.html",
+      "view/pay/rubCardPay.html",
+      "view/merchant/shopDetails.html",
+      "view/scan/qrscan.html"
+    ]
+  },
+  "view/merchant/cardSellingDetails.html": {
+    "refer": [
+      "view/pay/cardSelling.html"
+    ]
+  },
+  "view/pay/storedCardPay.html": {
+    "refer": [
+      "view/pay/paycardsuccess.html"
+    ]
+  },
+  "view/pay/paycardsuccess.html": {
+    "refer": [
+      "view/user/card/memcardDetail.html"
+    ]
+  },
+  "view/pay/rechargePay.html": {
+    "refer": [
+      "view/pay/paycardsuccess.html"
+    ]
+  },
+  "view/ad/screenAD.html": {
+    "resources": [
+      "res/css/base.css",
+      "res/fonts/mui.ttf",
+      "view/ad/screenAD.js"
+    ]
+  },
+  "view/scan/qrscan.html": {
+    "resources": [
+      "view/scan/qrback.html"
+    ],
+    "refer": [
+      "view/scan/qrback.html",
+      "view/pay/storedCardPay.html",
+      "view/scan/noCard.html",
+      "view/merchant/merchantCard.html"
+    ]
+  },
+  "view/scan/noCard.html": {
+    "refer": [
+      "view/merchant/merchantCard.html"
+    ]
+  }
+}
